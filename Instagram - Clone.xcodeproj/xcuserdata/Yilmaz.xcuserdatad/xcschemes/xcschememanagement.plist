@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Instagram - Clone.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>015B6A7B1BD57F93001990A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>015B6A971BD57F93001990A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>015B6AA21BD57F93001990A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
