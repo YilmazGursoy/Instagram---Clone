@@ -7,15 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011015071BD8F2DD00A4B7BF /* ImagePickerControllerHelperMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 011015061BD8F2DD00A4B7BF /* ImagePickerControllerHelperMethod.m */; };
+		012A2E291BFA6CCC00A922B3 /* ImagesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 012A2E271BFA6CCC00A922B3 /* ImagesCollectionViewCell.m */; };
+		012A2E2A1BFA6CCC00A922B3 /* ImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012A2E281BFA6CCC00A922B3 /* ImagesCollectionViewCell.xib */; };
+		0147C44D1BFA946500F0E22A /* ImagesHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 0147C44C1BFA946500F0E22A /* ImagesHelperMethods.m */; };
+		0147C4501BFBCAFB00F0E22A /* FriendsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0147C44F1BFBCAFB00F0E22A /* FriendsListTableViewCell.m */; };
 		015B6A811BD57F93001990A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 015B6A801BD57F93001990A6 /* main.m */; };
 		015B6A841BD57F93001990A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 015B6A831BD57F93001990A6 /* AppDelegate.m */; };
-		015B6A871BD57F93001990A6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015B6A861BD57F93001990A6 /* FirstViewController.m */; };
-		015B6A8A1BD57F93001990A6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015B6A891BD57F93001990A6 /* SecondViewController.m */; };
 		015B6A8D1BD57F93001990A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015B6A8B1BD57F93001990A6 /* Main.storyboard */; };
 		015B6A8F1BD57F93001990A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015B6A8E1BD57F93001990A6 /* Assets.xcassets */; };
 		015B6A921BD57F93001990A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015B6A901BD57F93001990A6 /* LaunchScreen.storyboard */; };
 		015B6A9D1BD57F93001990A6 /* Instagram___CloneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 015B6A9C1BD57F93001990A6 /* Instagram___CloneTests.m */; };
 		015B6AA81BD57F93001990A6 /* Instagram___CloneUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 015B6AA71BD57F93001990A6 /* Instagram___CloneUITests.m */; };
+		015C27CF1BFE8AD300731D4B /* SendAddFriendRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C27CE1BFE8AD300731D4B /* SendAddFriendRequestHelper.m */; };
+		015C27D51BFFB30600731D4B /* ServerFriendEditing.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C27D41BFFB30600731D4B /* ServerFriendEditing.m */; };
+		01703EC31BFBE72300359FF3 /* ServerAllUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 01703EC21BFBE72300359FF3 /* ServerAllUsers.m */; };
+		01703EC61BFBE96500359FF3 /* AllUsersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01703EC51BFBE96500359FF3 /* AllUsersListViewController.m */; };
+		019AE93D1BFCF3EF00DFC91D /* UsersProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019AE93B1BFCF3EF00DFC91D /* UsersProfileViewController.m */; };
+		019AE93E1BFCF3EF00DFC91D /* UsersProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019AE93C1BFCF3EF00DFC91D /* UsersProfileViewController.xib */; };
+		01EACAA81BFD440000AACA1B /* ServerFriendsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EACAA71BFD440000AACA1B /* ServerFriendsList.m */; };
+		01EACAAB1BFD442F00AACA1B /* FriendsHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EACAAA1BFD442F00AACA1B /* FriendsHelperMethods.m */; };
+		01F847221BD795B6005AAAE1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F847211BD795B6005AAAE1 /* HomeViewController.m */; };
+		01F847281BD795D9005AAAE1 /* UploadImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F847271BD795D9005AAAE1 /* UploadImagesViewController.m */; };
+		01F8472B1BD795EE005AAAE1 /* FriendsActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F8472A1BD795EE005AAAE1 /* FriendsActivityViewController.m */; };
+		01F8472E1BD795F7005AAAE1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F8472D1BD795F7005AAAE1 /* ProfileViewController.m */; };
+		01F847331BD796AF005AAAE1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F847321BD796AF005AAAE1 /* LoginViewController.m */; };
+		01F847361BD796C0005AAAE1 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F847351BD796C0005AAAE1 /* SignUpViewController.m */; };
+		01F8473A1BD7F557005AAAE1 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F847391BD7F557005AAAE1 /* BaseViewController.m */; };
+		01F8473F1BD81241005AAAE1 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F8473E1BD81241005AAAE1 /* AppConstants.m */; };
+		EE6DEAF25AF0958175CEFDAA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A06C70446A9DB42FBEA9129B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +56,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011015051BD8F2DD00A4B7BF /* ImagePickerControllerHelperMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerControllerHelperMethod.h; sourceTree = "<group>"; };
+		011015061BD8F2DD00A4B7BF /* ImagePickerControllerHelperMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerControllerHelperMethod.m; sourceTree = "<group>"; };
+		012A2E261BFA6CCC00A922B3 /* ImagesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesCollectionViewCell.h; sourceTree = "<group>"; };
+		012A2E271BFA6CCC00A922B3 /* ImagesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesCollectionViewCell.m; sourceTree = "<group>"; };
+		012A2E281BFA6CCC00A922B3 /* ImagesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesCollectionViewCell.xib; sourceTree = "<group>"; };
+		0147C44B1BFA946500F0E22A /* ImagesHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesHelperMethods.h; sourceTree = "<group>"; };
+		0147C44C1BFA946500F0E22A /* ImagesHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesHelperMethods.m; sourceTree = "<group>"; };
+		0147C44E1BFBCAFB00F0E22A /* FriendsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListTableViewCell.h; sourceTree = "<group>"; };
+		0147C44F1BFBCAFB00F0E22A /* FriendsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListTableViewCell.m; sourceTree = "<group>"; };
 		015B6A7C1BD57F93001990A6 /* Instagram - Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram - Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		015B6A801BD57F93001990A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		015B6A821BD57F93001990A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		015B6A831BD57F93001990A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		015B6A851BD57F93001990A6 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		015B6A861BD57F93001990A6 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		015B6A881BD57F93001990A6 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		015B6A891BD57F93001990A6 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		015B6A8C1BD57F93001990A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		015B6A8E1BD57F93001990A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		015B6A911BD57F93001990A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +79,40 @@
 		015B6AA31BD57F93001990A6 /* Instagram - CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Instagram - CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		015B6AA71BD57F93001990A6 /* Instagram___CloneUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Instagram___CloneUITests.m"; sourceTree = "<group>"; };
 		015B6AA91BD57F93001990A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		015C27CD1BFE8AD300731D4B /* SendAddFriendRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendAddFriendRequestHelper.h; sourceTree = "<group>"; };
+		015C27CE1BFE8AD300731D4B /* SendAddFriendRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendAddFriendRequestHelper.m; sourceTree = "<group>"; };
+		015C27D31BFFB30600731D4B /* ServerFriendEditing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerFriendEditing.h; sourceTree = "<group>"; };
+		015C27D41BFFB30600731D4B /* ServerFriendEditing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerFriendEditing.m; sourceTree = "<group>"; };
+		01703EC11BFBE72300359FF3 /* ServerAllUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerAllUsers.h; path = ../ServerAllUsers.h; sourceTree = "<group>"; };
+		01703EC21BFBE72300359FF3 /* ServerAllUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerAllUsers.m; path = ../ServerAllUsers.m; sourceTree = "<group>"; };
+		01703EC41BFBE96500359FF3 /* AllUsersListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllUsersListViewController.h; sourceTree = "<group>"; };
+		01703EC51BFBE96500359FF3 /* AllUsersListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllUsersListViewController.m; sourceTree = "<group>"; };
+		019AE93A1BFCF3EF00DFC91D /* UsersProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersProfileViewController.h; sourceTree = "<group>"; };
+		019AE93B1BFCF3EF00DFC91D /* UsersProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersProfileViewController.m; sourceTree = "<group>"; };
+		019AE93C1BFCF3EF00DFC91D /* UsersProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsersProfileViewController.xib; sourceTree = "<group>"; };
+		01EACAA61BFD440000AACA1B /* ServerFriendsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerFriendsList.h; sourceTree = "<group>"; };
+		01EACAA71BFD440000AACA1B /* ServerFriendsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerFriendsList.m; sourceTree = "<group>"; };
+		01EACAA91BFD442F00AACA1B /* FriendsHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsHelperMethods.h; sourceTree = "<group>"; };
+		01EACAAA1BFD442F00AACA1B /* FriendsHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsHelperMethods.m; sourceTree = "<group>"; };
+		01F847201BD795B6005AAAE1 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		01F847211BD795B6005AAAE1 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		01F847261BD795D9005AAAE1 /* UploadImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadImagesViewController.h; sourceTree = "<group>"; };
+		01F847271BD795D9005AAAE1 /* UploadImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImagesViewController.m; sourceTree = "<group>"; };
+		01F847291BD795EE005AAAE1 /* FriendsActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsActivityViewController.h; sourceTree = "<group>"; };
+		01F8472A1BD795EE005AAAE1 /* FriendsActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsActivityViewController.m; sourceTree = "<group>"; };
+		01F8472C1BD795F7005AAAE1 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		01F8472D1BD795F7005AAAE1 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		01F847311BD796AF005AAAE1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		01F847321BD796AF005AAAE1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		01F847341BD796C0005AAAE1 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		01F847351BD796C0005AAAE1 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		01F847381BD7F557005AAAE1 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		01F847391BD7F557005AAAE1 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		01F8473D1BD81241005AAAE1 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		01F8473E1BD81241005AAAE1 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		3E5DED56114A888634B3EB7C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A06C70446A9DB42FBEA9129B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55D550F1956891F02D260B3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE6DEAF25AF0958175CEFDAA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +141,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012A2E171BFA648A00A922B3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				011015051BD8F2DD00A4B7BF /* ImagePickerControllerHelperMethod.h */,
+				011015061BD8F2DD00A4B7BF /* ImagePickerControllerHelperMethod.m */,
+				0147C44B1BFA946500F0E22A /* ImagesHelperMethods.h */,
+				0147C44C1BFA946500F0E22A /* ImagesHelperMethods.m */,
+				01EACAA91BFD442F00AACA1B /* FriendsHelperMethods.h */,
+				01EACAAA1BFD442F00AACA1B /* FriendsHelperMethods.m */,
+				015C27CD1BFE8AD300731D4B /* SendAddFriendRequestHelper.h */,
+				015C27CE1BFE8AD300731D4B /* SendAddFriendRequestHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		0147C4511BFBCB0800F0E22A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				012A2E261BFA6CCC00A922B3 /* ImagesCollectionViewCell.h */,
+				012A2E271BFA6CCC00A922B3 /* ImagesCollectionViewCell.m */,
+				0147C44E1BFBCAFB00F0E22A /* FriendsListTableViewCell.h */,
+				0147C44F1BFBCAFB00F0E22A /* FriendsListTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		015B6A731BD57F93001990A6 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +174,8 @@
 				015B6A9B1BD57F93001990A6 /* Instagram - CloneTests */,
 				015B6AA61BD57F93001990A6 /* Instagram - CloneUITests */,
 				015B6A7D1BD57F93001990A6 /* Products */,
+				193A8B7463BAE13D78890003 /* Pods */,
+				81B03849AD30C4CC99C148F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,11 +194,15 @@
 			children = (
 				015B6A821BD57F93001990A6 /* AppDelegate.h */,
 				015B6A831BD57F93001990A6 /* AppDelegate.m */,
-				015B6A851BD57F93001990A6 /* FirstViewController.h */,
-				015B6A861BD57F93001990A6 /* FirstViewController.m */,
-				015B6A881BD57F93001990A6 /* SecondViewController.h */,
-				015B6A891BD57F93001990A6 /* SecondViewController.m */,
 				015B6A8B1BD57F93001990A6 /* Main.storyboard */,
+				019AE93A1BFCF3EF00DFC91D /* UsersProfileViewController.h */,
+				019AE93B1BFCF3EF00DFC91D /* UsersProfileViewController.m */,
+				019AE93C1BFCF3EF00DFC91D /* UsersProfileViewController.xib */,
+				012A2E281BFA6CCC00A922B3 /* ImagesCollectionViewCell.xib */,
+				01F8472F1BD7960C005AAAE1 /* Controllers */,
+				0147C4511BFBCB0800F0E22A /* Cells */,
+				012A2E171BFA648A00A922B3 /* Helpers */,
+				01EACAAC1BFD443B00AACA1B /* Server */,
 				015B6A8E1BD57F93001990A6 /* Assets.xcassets */,
 				015B6A901BD57F93001990A6 /* LaunchScreen.storyboard */,
 				015B6A931BD57F93001990A6 /* Info.plist */,
@@ -122,6 +214,8 @@
 		015B6A7F1BD57F93001990A6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				01F8473D1BD81241005AAAE1 /* AppConstants.h */,
+				01F8473E1BD81241005AAAE1 /* AppConstants.m */,
 				015B6A801BD57F93001990A6 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -145,6 +239,75 @@
 			path = "Instagram - CloneUITests";
 			sourceTree = "<group>";
 		};
+		01EACAAC1BFD443B00AACA1B /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				01703EC11BFBE72300359FF3 /* ServerAllUsers.h */,
+				01703EC21BFBE72300359FF3 /* ServerAllUsers.m */,
+				01EACAA61BFD440000AACA1B /* ServerFriendsList.h */,
+				01EACAA71BFD440000AACA1B /* ServerFriendsList.m */,
+				015C27D31BFFB30600731D4B /* ServerFriendEditing.h */,
+				015C27D41BFFB30600731D4B /* ServerFriendEditing.m */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		01F8472F1BD7960C005AAAE1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				01F847381BD7F557005AAAE1 /* BaseViewController.h */,
+				01F847391BD7F557005AAAE1 /* BaseViewController.m */,
+				01F847371BD796DD005AAAE1 /* Login SignUp Controller */,
+				01F847301BD79617005AAAE1 /* TabControllers */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		01F847301BD79617005AAAE1 /* TabControllers */ = {
+			isa = PBXGroup;
+			children = (
+				01F8472C1BD795F7005AAAE1 /* ProfileViewController.h */,
+				01F8472D1BD795F7005AAAE1 /* ProfileViewController.m */,
+				01F847291BD795EE005AAAE1 /* FriendsActivityViewController.h */,
+				01F8472A1BD795EE005AAAE1 /* FriendsActivityViewController.m */,
+				01F847261BD795D9005AAAE1 /* UploadImagesViewController.h */,
+				01F847271BD795D9005AAAE1 /* UploadImagesViewController.m */,
+				01F847201BD795B6005AAAE1 /* HomeViewController.h */,
+				01F847211BD795B6005AAAE1 /* HomeViewController.m */,
+				01703EC41BFBE96500359FF3 /* AllUsersListViewController.h */,
+				01703EC51BFBE96500359FF3 /* AllUsersListViewController.m */,
+			);
+			name = TabControllers;
+			sourceTree = "<group>";
+		};
+		01F847371BD796DD005AAAE1 /* Login SignUp Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01F847341BD796C0005AAAE1 /* SignUpViewController.h */,
+				01F847351BD796C0005AAAE1 /* SignUpViewController.m */,
+				01F847311BD796AF005AAAE1 /* LoginViewController.h */,
+				01F847321BD796AF005AAAE1 /* LoginViewController.m */,
+			);
+			name = "Login SignUp Controller";
+			sourceTree = "<group>";
+		};
+		193A8B7463BAE13D78890003 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B55D550F1956891F02D260B3 /* Pods.debug.xcconfig */,
+				3E5DED56114A888634B3EB7C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		81B03849AD30C4CC99C148F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A06C70446A9DB42FBEA9129B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +315,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 015B6AAC1BD57F93001990A6 /* Build configuration list for PBXNativeTarget "Instagram - Clone" */;
 			buildPhases = (
+				07899F9878337736F413C365 /* Check Pods Manifest.lock */,
 				015B6A781BD57F93001990A6 /* Sources */,
 				015B6A791BD57F93001990A6 /* Frameworks */,
 				015B6A7A1BD57F93001990A6 /* Resources */,
+				7982D995E268164004359283 /* Embed Pods Frameworks */,
+				FC54170A901AE3ACE1A6494B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,6 +378,7 @@
 				TargetAttributes = {
 					015B6A7B1BD57F93001990A6 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 3BH3ADD3PS;
 					};
 					015B6A971BD57F93001990A6 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -250,6 +417,8 @@
 			files = (
 				015B6A921BD57F93001990A6 /* LaunchScreen.storyboard in Resources */,
 				015B6A8F1BD57F93001990A6 /* Assets.xcassets in Resources */,
+				019AE93E1BFCF3EF00DFC91D /* UsersProfileViewController.xib in Resources */,
+				012A2E2A1BFA6CCC00A922B3 /* ImagesCollectionViewCell.xib in Resources */,
 				015B6A8D1BD57F93001990A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,15 +439,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07899F9878337736F413C365 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7982D995E268164004359283 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC54170A901AE3ACE1A6494B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		015B6A781BD57F93001990A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				015B6A8A1BD57F93001990A6 /* SecondViewController.m in Sources */,
+				01F847331BD796AF005AAAE1 /* LoginViewController.m in Sources */,
+				01F8473F1BD81241005AAAE1 /* AppConstants.m in Sources */,
+				01F8473A1BD7F557005AAAE1 /* BaseViewController.m in Sources */,
+				019AE93D1BFCF3EF00DFC91D /* UsersProfileViewController.m in Sources */,
 				015B6A841BD57F93001990A6 /* AppDelegate.m in Sources */,
-				015B6A871BD57F93001990A6 /* FirstViewController.m in Sources */,
+				011015071BD8F2DD00A4B7BF /* ImagePickerControllerHelperMethod.m in Sources */,
 				015B6A811BD57F93001990A6 /* main.m in Sources */,
+				015C27CF1BFE8AD300731D4B /* SendAddFriendRequestHelper.m in Sources */,
+				012A2E291BFA6CCC00A922B3 /* ImagesCollectionViewCell.m in Sources */,
+				01F847221BD795B6005AAAE1 /* HomeViewController.m in Sources */,
+				0147C4501BFBCAFB00F0E22A /* FriendsListTableViewCell.m in Sources */,
+				01F8472E1BD795F7005AAAE1 /* ProfileViewController.m in Sources */,
+				01F847281BD795D9005AAAE1 /* UploadImagesViewController.m in Sources */,
+				01EACAA81BFD440000AACA1B /* ServerFriendsList.m in Sources */,
+				01F8472B1BD795EE005AAAE1 /* FriendsActivityViewController.m in Sources */,
+				015C27D51BFFB30600731D4B /* ServerFriendEditing.m in Sources */,
+				01703EC31BFBE72300359FF3 /* ServerAllUsers.m in Sources */,
+				01703EC61BFBE96500359FF3 /* AllUsersListViewController.m in Sources */,
+				01EACAAB1BFD442F00AACA1B /* FriendsHelperMethods.m in Sources */,
+				0147C44D1BFA946500F0E22A /* ImagesHelperMethods.m in Sources */,
+				01F847361BD796C0005AAAE1 /* SignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,8 +649,10 @@
 		};
 		015B6AAD1BD57F93001990A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B55D550F1956891F02D260B3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Instagram - Clone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yilmaz.Instagram---Clone";
@@ -426,8 +662,10 @@
 		};
 		015B6AAE1BD57F93001990A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E5DED56114A888634B3EB7C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Instagram - Clone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yilmaz.Instagram---Clone";
@@ -502,6 +740,7 @@
 				015B6AAE1BD57F93001990A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		015B6AAF1BD57F93001990A6 /* Build configuration list for PBXNativeTarget "Instagram - CloneTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +749,7 @@
 				015B6AB11BD57F93001990A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		015B6AB21BD57F93001990A6 /* Build configuration list for PBXNativeTarget "Instagram - CloneUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +758,7 @@
 				015B6AB41BD57F93001990A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
