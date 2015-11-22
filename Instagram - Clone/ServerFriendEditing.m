@@ -47,21 +47,22 @@
 }
 
 -(void)isISendRequestThisUser:(PFUser*)someoneUser{
+#error Fonskiyon tamamlanıldı artık istek attıklarını kontrol ediyor şimdi de yalnızca karşı kullanıcının onaylayıp ardından bu kullanıcının o onaya göre kendi listesini güncellemesini isteyecegiz bunun için bir tane requests adında bir yapı oluşturacagız ve bu yapıda alan kısmından biz kendi ID mizi sorgulatacagız ve eşleşme olunca o objenin boolean sonucuna bakacagız boolean sonuca göre de listemizi güncelleyecegiz
+    PFUser *user = [PFUser currentUser];
     
-    PFQuery *waitingRequests = [PFUser query];
-
-    [waitingRequests orderByAscending:WaitingRequestsListID];
-    
-    NSError *error = nil;
-    
-    [waitingRequests getObjectInBackgroundWithId:someoneUser.objectId block:^(PFObject * _Nullable object, NSError * _Nullable error) {
-        if(error) {
-            NSLog(@"There is an error : -(BOOL)isISendRequestThisUser:(PFUser*)someoneUser");
-            [self.delegate controlIfISendRequest:false];
-        } else {
-            [self.delegate controlIfISendRequest:true];
+        NSArray *waitingList = user[WaitingRequestsListID];
+    int control = 0;
+    for(NSString *ID in waitingList) {
+        if([ID isEqualToString:someoneUser.objectId]) {
+            control = 1;
         }
-    }];
+    }
+    
+    if(control == 1) {
+        [self.delegate controlIfISendRequest:true];
+    } else {
+        [self.delegate controlIfISendRequest:false];
+    }
 }
 
 @end

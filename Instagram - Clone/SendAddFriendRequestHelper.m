@@ -38,10 +38,8 @@
 }
 
 -(void)controlRequestList:(PFUser*)user{
-    ServerFriendEditing *editingFriend = [[ServerFriendEditing alloc]init];
     
-    [editingFriend isISendRequestThisUser:user];
-
+#warning Delegate metotlar ayarlanacak bir hata var hatanın sebebi muhtemelen ServerFriendEditing classında biz protocol çağırıyoruz ancak bu çağırma bizim helper classımızın içerisinde gerçekleşiyor ve bu yuzden biz ana programda birşey alamıyoruz
 }
 
 

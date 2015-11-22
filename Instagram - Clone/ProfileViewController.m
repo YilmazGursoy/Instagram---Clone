@@ -9,6 +9,8 @@
 #import "ProfileViewController.h"
 #import "FriendsHelperMethods.h"
 
+
+
 @interface ProfileViewController ()
 @property (strong, nonatomic) ServerFriendsList *friendsListServer;
 @property (strong, nonatomic) FriendsHelperMethods *friendsListHelper;
@@ -27,16 +29,10 @@
     [super viewWillAppear:animated];
     if(self.controlUser == nil) {
         [self showUserProfile:[PFUser currentUser]];
-        [self logoutButtonShow];
+        [self setButtonTitle:0];
     }
     else {
-        self.friendsListHelper = [[FriendsHelperMethods alloc]init];
-        self.friendsListServer = [[ServerFriendsList alloc]init];
-        self.serverFriendEditingObject = [[ServerFriendEditing alloc]init];
-        self.sendAddFriendsRequestObject = [[SendAddFriendRequestHelper alloc]init];
-        self.friendsListServer.delegate = self;
-        [self.friendsListServer getAllFriends];
-        [self.sendAddFriendsRequestObject controlRequestList:self.controlUser];
+        [self userNotMeSetUpAllDelegates];
     }
 }
 -(void)viewDidDisappear:(BOOL)animated{
@@ -54,7 +50,6 @@
         [PFUser logOut];
         [self.tabBarController setSelectedIndex:0];
     } else if([self.logoutOrAddRemoveFriendsButton.currentTitle isEqualToString:@"Ekle"]) {
-        self.serverFriendEditingObject.delegate = self;
         [self.serverFriendEditingObject sendFriendsRequestToUser:self.controlUser];
         [self.sendAddFriendsRequestObject addRequestListToThisUser:self.controlUser];
             //kullanıcıya mesaj atılacak
@@ -87,13 +82,11 @@
     [self showUserProfile:self.controlUser];
     if(array.count > 0) {
         if([self.friendsListHelper checkIsUserMyFriends:self.controlUser andArray:array]) {
-            [self removeFriendsButtonShow];
-        } else {
-            [self addFriendsButtonShow];
+            [self setButtonTitle:1];
         }
     } else {
         [self showAlertMessage:@"Hiç arkadaşınız bulunmamaktadır" andPop:true];
-        [self addFriendsButtonShow];
+        [self setButtonTitle:2];
     }
     
     
@@ -101,7 +94,6 @@
 
 -(void)getServerFriendsListFailed{
     [self showUserProfile:self.controlUser];
-    [self addFriendsButtonShow];
 }
 
 
@@ -112,19 +104,32 @@
         [self.logoutOrAddRemoveFriendsButton setTitle:@"Beklemede" forState:UIControlStateNormal];
         [self.logoutOrAddRemoveFriendsButton setEnabled:false];
     }
-    
 }
 
 -(void)controlIfISendRequest:(BOOL)boolean{
     if(boolean) {
-        [self waitingButtonShow];
+        [self setButtonTitle:3];
     } else {
-        [self addFriendsButtonShow];
+        [self setButtonTitle:2];
     }
 }
 
 #pragma mark - SetUpUI
 
+-(void)userNotMeSetUpAllDelegates{
+    self.friendsListHelper = [[FriendsHelperMethods alloc]init];
+    self.friendsListServer = [[ServerFriendsList alloc]init];
+    self.serverFriendEditingObject = [[ServerFriendEditing alloc]init];
+    self.sendAddFriendsRequestObject = [[SendAddFriendRequestHelper alloc]init];
+    self.friendsListServer.delegate = self;
+    self.serverFriendEditingObject.delegate = self;
+    [self.friendsListServer getAllFriends];
+//    [self.sendAddFriendsRequestObject controlRequestList:self.controlUser];
+    
+    //TODO:Burası classlara bağlı yapılacak
+    [self.serverFriendEditingObject isISendRequestThisUser:self.controlUser];
+    
+}
 -(void)showUserProfile:(PFUser*)user{
     
     self.usernameLabel.text = user.username;
@@ -144,23 +149,39 @@
         self.percentageDone.text = [NSString stringWithFormat:@"%i",percentDone];
         if(percentDone == 100) {
             self.percentageDone.hidden = true;
+            self.logoutOrAddRemoveFriendsButton.hidden = false;
         }
     }];
 }
 
 #pragma mark - UIHelper
 
--(void)logoutButtonShow{
-    [self.logoutOrAddRemoveFriendsButton setTitle:@"Çıkış" forState:UIControlStateNormal];
-}
--(void)removeFriendsButtonShow{
-    [self.logoutOrAddRemoveFriendsButton setTitle:@"Çıkar" forState:UIControlStateNormal];
-}
--(void)addFriendsButtonShow{
-    [self.logoutOrAddRemoveFriendsButton setTitle:@"Ekle" forState:UIControlStateNormal];
-}
--(void)waitingButtonShow{
-    [self.logoutOrAddRemoveFriendsButton setTitle:@"Beklemede" forState:UIControlStateNormal];
-    self.logoutOrAddRemoveFriendsButton.enabled = false;
+/**
+ *  FOnskiyon enum deger ataması yapmaktadır
+ *
+ *  @param title 0 = Cıkıs, 1 = Cıkar, 2 = Ekle, 3 = Beklemede
+ */
+-(void)setButtonTitle:(int)title{
+    ButtonNames names = title;
+    switch (names) {
+        case Cikis:
+            [self.logoutOrAddRemoveFriendsButton setTitle:@"Çıkış" forState:UIControlStateNormal];
+        break;
+         case Cikar:
+            [self.logoutOrAddRemoveFriendsButton setTitle:@"Çıkar" forState:UIControlStateNormal];
+        break;
+        case Ekle:
+            [self.logoutOrAddRemoveFriendsButton setTitle:@"Ekle" forState:UIControlStateNormal];
+        break;
+        case Beklemede:
+            [self.logoutOrAddRemoveFriendsButton setTitle:@"Beklemede" forState:UIControlStateNormal];
+            self.logoutOrAddRemoveFriendsButton.enabled = false;
+        break;
+        default:
+            NSLog(@"Hicbiri ile eşleştirilemesi");
+            break;
+    }
+    
+
 }
 @end

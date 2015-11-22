@@ -13,6 +13,13 @@
 #import "SendAddFriendRequestHelper.h"
 #import "ServerFriendEditing.h"
 
+typedef enum{
+    Cikis,
+    Cikar,
+    Ekle,
+    Beklemede
+}ButtonNames;
+
 @interface ProfileViewController : BaseViewController < ServerFriendsListDelegate , UIImagePickerControllerDelegate, ImagePickerHelper, SendAddFriendsRequestDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageview;
@@ -20,7 +27,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *descriptionLabel;
 @property (strong, nonatomic) IBOutlet UIButton *logoutOrAddRemoveFriendsButton;
 @property (strong, nonatomic) IBOutlet UILabel *percentageDone;
-
+@property (nonatomic) ButtonNames *buttonNames;
 
 //Profile i açılan currentuser mi specific user mı onu belirtir,
 @property (strong, nonatomic) PFUser *controlUser;
