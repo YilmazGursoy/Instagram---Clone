@@ -11,8 +11,9 @@
 
 
 
-@interface SignUpViewController ()
 
+@interface SignUpViewController ()
+    @property (strong, nonatomic) UIImage *littleImage;
     @property (strong, nonatomic) UIImage *profileImage;
     @property (strong, nonatomic) ImagesHelperMethods *changeImageSizeHelper;
 @end
@@ -72,6 +73,8 @@
 
 #pragma mark - ImagePickerHelper Delegate methods
 
+#warning Buraya yeni kaydedilen kullanıcının profil fotografı ön izlemesi olarak minik bir 40*40 lık resmide kaydedilecek
+
 -(void)didFailed{
     
 }
@@ -79,6 +82,7 @@
 -(void)imageSelectingSuccesfull:(UIImage *)image{
 
     self.profileImage = [self.changeImageSizeHelper resizeImage:image toWidth:(float)image.size.width/10.0 andHeight:(float)image.size.height/10.0];
+    self.littleImage = [self.changeImageSizeHelper resizeImage:image toWidth:40.0 andHeight:40.0];
     [self.profileImageView setImage:image];
     [self.profileImageAddButton setHidden:true];
 

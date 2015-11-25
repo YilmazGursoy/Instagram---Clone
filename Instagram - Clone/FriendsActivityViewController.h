@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "ServerRequestsList.h"
 
-@interface FriendsActivityViewController : BaseViewController
+@interface FriendsActivityViewController : BaseViewController < UITableViewDelegate, UITableViewDataSource, ServerRequestListDelegate >
+
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) ServerRequestsList *requestList;
 
 @end

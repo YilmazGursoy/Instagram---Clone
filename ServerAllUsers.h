@@ -18,7 +18,16 @@
 
 @interface ServerAllUsers : NSObject
 
--(void)getAllUserInformations;
+/**
+*  Metot hem initialize eder hem delegate i initialize eder hemde getAllUser metodunu çağırır.
+*
+*  @param delegate kullanmak istedigimiz delegate
+*
+*  @return dönüş tipi instancetype
+*/
+-(instancetype)initWithDelegate:(id<ServerAllUserDelegate>)delegate;
+
+
 @property (strong, nonatomic) id<ServerAllUserDelegate> delegate;
 
 @end

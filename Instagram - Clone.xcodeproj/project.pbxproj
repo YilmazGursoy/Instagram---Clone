@@ -25,6 +25,7 @@
 		01703EC61BFBE96500359FF3 /* AllUsersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01703EC51BFBE96500359FF3 /* AllUsersListViewController.m */; };
 		019AE93D1BFCF3EF00DFC91D /* UsersProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019AE93B1BFCF3EF00DFC91D /* UsersProfileViewController.m */; };
 		019AE93E1BFCF3EF00DFC91D /* UsersProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019AE93C1BFCF3EF00DFC91D /* UsersProfileViewController.xib */; };
+		01B0899D1C05EFF40048D729 /* ServerRequestsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0899C1C05EFF40048D729 /* ServerRequestsList.m */; };
 		01EACAA81BFD440000AACA1B /* ServerFriendsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EACAA71BFD440000AACA1B /* ServerFriendsList.m */; };
 		01EACAAB1BFD442F00AACA1B /* FriendsHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EACAAA1BFD442F00AACA1B /* FriendsHelperMethods.m */; };
 		01F847221BD795B6005AAAE1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F847211BD795B6005AAAE1 /* HomeViewController.m */; };
@@ -90,6 +91,8 @@
 		019AE93A1BFCF3EF00DFC91D /* UsersProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersProfileViewController.h; sourceTree = "<group>"; };
 		019AE93B1BFCF3EF00DFC91D /* UsersProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersProfileViewController.m; sourceTree = "<group>"; };
 		019AE93C1BFCF3EF00DFC91D /* UsersProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsersProfileViewController.xib; sourceTree = "<group>"; };
+		01B0899B1C05EFF40048D729 /* ServerRequestsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerRequestsList.h; sourceTree = "<group>"; };
+		01B0899C1C05EFF40048D729 /* ServerRequestsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerRequestsList.m; sourceTree = "<group>"; };
 		01EACAA61BFD440000AACA1B /* ServerFriendsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerFriendsList.h; sourceTree = "<group>"; };
 		01EACAA71BFD440000AACA1B /* ServerFriendsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerFriendsList.m; sourceTree = "<group>"; };
 		01EACAA91BFD442F00AACA1B /* FriendsHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsHelperMethods.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				01703EC21BFBE72300359FF3 /* ServerAllUsers.m */,
 				01EACAA61BFD440000AACA1B /* ServerFriendsList.h */,
 				01EACAA71BFD440000AACA1B /* ServerFriendsList.m */,
+				01B0899B1C05EFF40048D729 /* ServerRequestsList.h */,
+				01B0899C1C05EFF40048D729 /* ServerRequestsList.m */,
 				015C27D31BFFB30600731D4B /* ServerFriendEditing.h */,
 				015C27D41BFFB30600731D4B /* ServerFriendEditing.m */,
 			);
@@ -494,6 +499,7 @@
 			files = (
 				01F847331BD796AF005AAAE1 /* LoginViewController.m in Sources */,
 				01F8473F1BD81241005AAAE1 /* AppConstants.m in Sources */,
+				01B0899D1C05EFF40048D729 /* ServerRequestsList.m in Sources */,
 				01F8473A1BD7F557005AAAE1 /* BaseViewController.m in Sources */,
 				019AE93D1BFCF3EF00DFC91D /* UsersProfileViewController.m in Sources */,
 				015B6A841BD57F93001990A6 /* AppDelegate.m in Sources */,

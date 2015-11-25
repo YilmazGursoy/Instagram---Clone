@@ -78,7 +78,6 @@
 #pragma mark - ServerFriendsListDelegate
 
 -(void)getServerFriendsListSuccess:(NSArray *)array{
-//#error Burada bir hata var ve sebebi muhtemelen istekler sırasında sonsuz döngü falan oluyor ve program currentUserProfile:(PFUser*)user fonksiyonunu çağırmıyor, kontrol edilecek
     [self showUserProfile:self.controlUser];
     if(array.count > 0) {
         if([self.friendsListHelper checkIsUserMyFriends:self.controlUser andArray:array]) {

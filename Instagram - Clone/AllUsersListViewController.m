@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.allUsersObject = [[ServerAllUsers alloc]init];
+    self.allUsersObject = [[ServerAllUsers alloc]initWithDelegate:self];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -78,8 +78,6 @@
 -(void)setupDelegatesAndSendRequest{
     self.tableView.delegate =self;
     self.tableView.dataSource = self;
-    self.allUsersObject.delegate = self;
-    [self.allUsersObject getAllUserInformations];
 }
 @end
 

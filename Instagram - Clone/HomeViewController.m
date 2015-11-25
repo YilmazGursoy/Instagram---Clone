@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if([PFUser currentUser] != nil) {
+        [[PFUser currentUser] fetch];
+    }
+
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

@@ -12,6 +12,13 @@
 
 @implementation ServerAllUsers
 
+-(instancetype)initWithDelegate:(id<ServerAllUserDelegate>)delegate{
+    
+    self.delegate = delegate;
+    [self getAllUserInformations];
+    return self;
+}
+
 -(void)getAllUserInformations{
 
     PFQuery *query = [PFUser query];
