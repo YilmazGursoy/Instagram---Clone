@@ -44,7 +44,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FriendsCell" forIndexPath:indexPath];
 
     PFUser *user = self.allUsersArray[indexPath.row];
-    if(![[PFUser currentUser] isEqual:user]) {
+    if(![[PFUser currentUser].objectId isEqual:user.objectId]) {
         cell.textLabel.text = user.username;
     }
     return cell;

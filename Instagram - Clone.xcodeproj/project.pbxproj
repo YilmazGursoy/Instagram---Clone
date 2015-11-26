@@ -26,6 +26,8 @@
 		019AE93D1BFCF3EF00DFC91D /* UsersProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019AE93B1BFCF3EF00DFC91D /* UsersProfileViewController.m */; };
 		019AE93E1BFCF3EF00DFC91D /* UsersProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019AE93C1BFCF3EF00DFC91D /* UsersProfileViewController.xib */; };
 		01B0899D1C05EFF40048D729 /* ServerRequestsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0899C1C05EFF40048D729 /* ServerRequestsList.m */; };
+		01B089E31C07054A0048D729 /* ProfileAcceptCancelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B089E11C07054A0048D729 /* ProfileAcceptCancelViewController.m */; };
+		01B089E41C07054A0048D729 /* ProfileAcceptCancelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B089E21C07054A0048D729 /* ProfileAcceptCancelViewController.xib */; };
 		01EACAA81BFD440000AACA1B /* ServerFriendsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EACAA71BFD440000AACA1B /* ServerFriendsList.m */; };
 		01EACAAB1BFD442F00AACA1B /* FriendsHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EACAAA1BFD442F00AACA1B /* FriendsHelperMethods.m */; };
 		01F847221BD795B6005AAAE1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F847211BD795B6005AAAE1 /* HomeViewController.m */; };
@@ -93,6 +95,9 @@
 		019AE93C1BFCF3EF00DFC91D /* UsersProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsersProfileViewController.xib; sourceTree = "<group>"; };
 		01B0899B1C05EFF40048D729 /* ServerRequestsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerRequestsList.h; sourceTree = "<group>"; };
 		01B0899C1C05EFF40048D729 /* ServerRequestsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerRequestsList.m; sourceTree = "<group>"; };
+		01B089E01C07054A0048D729 /* ProfileAcceptCancelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileAcceptCancelViewController.h; sourceTree = "<group>"; };
+		01B089E11C07054A0048D729 /* ProfileAcceptCancelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileAcceptCancelViewController.m; sourceTree = "<group>"; };
+		01B089E21C07054A0048D729 /* ProfileAcceptCancelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileAcceptCancelViewController.xib; sourceTree = "<group>"; };
 		01EACAA61BFD440000AACA1B /* ServerFriendsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerFriendsList.h; sourceTree = "<group>"; };
 		01EACAA71BFD440000AACA1B /* ServerFriendsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerFriendsList.m; sourceTree = "<group>"; };
 		01EACAA91BFD442F00AACA1B /* FriendsHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsHelperMethods.h; sourceTree = "<group>"; };
@@ -281,6 +286,9 @@
 				01F847211BD795B6005AAAE1 /* HomeViewController.m */,
 				01703EC41BFBE96500359FF3 /* AllUsersListViewController.h */,
 				01703EC51BFBE96500359FF3 /* AllUsersListViewController.m */,
+				01B089E01C07054A0048D729 /* ProfileAcceptCancelViewController.h */,
+				01B089E11C07054A0048D729 /* ProfileAcceptCancelViewController.m */,
+				01B089E21C07054A0048D729 /* ProfileAcceptCancelViewController.xib */,
 			);
 			name = TabControllers;
 			sourceTree = "<group>";
@@ -422,6 +430,7 @@
 			files = (
 				015B6A921BD57F93001990A6 /* LaunchScreen.storyboard in Resources */,
 				015B6A8F1BD57F93001990A6 /* Assets.xcassets in Resources */,
+				01B089E41C07054A0048D729 /* ProfileAcceptCancelViewController.xib in Resources */,
 				019AE93E1BFCF3EF00DFC91D /* UsersProfileViewController.xib in Resources */,
 				012A2E2A1BFA6CCC00A922B3 /* ImagesCollectionViewCell.xib in Resources */,
 				015B6A8D1BD57F93001990A6 /* Main.storyboard in Resources */,
@@ -513,6 +522,7 @@
 				01F847281BD795D9005AAAE1 /* UploadImagesViewController.m in Sources */,
 				01EACAA81BFD440000AACA1B /* ServerFriendsList.m in Sources */,
 				01F8472B1BD795EE005AAAE1 /* FriendsActivityViewController.m in Sources */,
+				01B089E31C07054A0048D729 /* ProfileAcceptCancelViewController.m in Sources */,
 				015C27D51BFFB30600731D4B /* ServerFriendEditing.m in Sources */,
 				01703EC31BFBE72300359FF3 /* ServerAllUsers.m in Sources */,
 				01703EC61BFBE96500359FF3 /* AllUsersListViewController.m in Sources */,

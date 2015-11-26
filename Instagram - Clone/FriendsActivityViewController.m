@@ -33,7 +33,6 @@
 
 #pragma mark - UITableViewDelegate-DataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-#error Istek atma ve isteğin karşıya gitmesi olayları ayarlandı şimdi tek eksik olan karşısı istek aldıgı zaman reddetmesi yada kabul etmesi
     
     return 1;
     
@@ -53,6 +52,12 @@
     cell.textLabel.text = object[@"senderName"];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PFObject *selectedObject = self.allRequests[indexPath.row];
+    PFUser *senderUser = selectedObject[@"senderUser"];
+#error Burada sender user alındı parse backedninden ve burada "ProfileAcceptCancelViewController" controller a atama yapılacak PrepareforsegueWithIdentifier metodu ullanılarak ardından gelen ekran ile ProfileAcceptCancelViewController ekranı baglanacak
 }
 
 #pragma mark - ServerRequestListDelegate
