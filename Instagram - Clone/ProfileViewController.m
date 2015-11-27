@@ -87,15 +87,11 @@
         [self showAlertMessage:@"Hiç arkadaşınız bulunmamaktadır" andPop:true];
         [self setButtonTitle:2];
     }
-    
-    
 }
 
 -(void)getServerFriendsListFailed{
     [self showUserProfile:self.controlUser];
 }
-
-
 #pragma mark - SendAddFriendsRequestDelegate
 
 -(void)controlIsSendSuccessful:(BOOL)boolean{
@@ -117,14 +113,9 @@
 
 -(void)userNotMeSetUpAllDelegates{
     self.friendsListHelper = [[FriendsHelperMethods alloc]init];
-    self.friendsListServer = [[ServerFriendsList alloc]init];
-    self.serverFriendEditingObject = [[ServerFriendEditing alloc]init];
+    self.friendsListServer = [[ServerFriendsList alloc]initWithDelegate:self];
+    self.serverFriendEditingObject = [[ServerFriendEditing alloc]initWithDelegate:self];
     self.sendAddFriendsRequestObject = [[SendAddFriendRequestHelper alloc]init];
-    self.friendsListServer.delegate = self;
-    self.serverFriendEditingObject.delegate = self;
-    [self.friendsListServer getAllFriends];
-//    [self.sendAddFriendsRequestObject controlRequestList:self.controlUser];
-    
     //TODO:Burası classlara bağlı yapılacak
     [self.serverFriendEditingObject isISendRequestThisUser:self.controlUser];
     

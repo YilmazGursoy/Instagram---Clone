@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Parse/Parse.h>
+#import "Server.h"
+
 @protocol SendAddFriendsRequestDelegate <NSObject>
 
 @optional
@@ -28,8 +29,9 @@
 
 @end
 
-@interface ServerFriendEditing : NSObject
+@interface ServerFriendEditing : Server
 @property (strong, nonatomic) id<SendAddFriendsRequestDelegate> delegate;
+
 
 /**
  *  Herhangi bir kullanıcıya arkadaşlık isteği atmamıza yarar
@@ -47,4 +49,13 @@
  *  @return eğer istek atmış isek ve istekten bir cevap gelmemiş ise bu ifade true doner ama eğer istek hiç atmadıysak o zamanda false döner,
  */
 -(void)isISendRequestThisUser:(PFUser*)someoneUser;
+
+/**
+ *  inittialize metodu
+ *
+ *  @param delegate delegate aktarılacak object default = self
+ *
+ *  @return donus tipi self
+ */
+-(instancetype)initWithDelegate:(id<SendAddFriendsRequestDelegate>)delegate;
 @end

@@ -56,8 +56,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     PFObject *selectedObject = self.allRequests[indexPath.row];
-    PFUser *senderUser = selectedObject[@"senderUser"];
-#error Burada sender user alındı parse backedninden ve burada "ProfileAcceptCancelViewController" controller a atama yapılacak PrepareforsegueWithIdentifier metodu ullanılarak ardından gelen ekran ile ProfileAcceptCancelViewController ekranı baglanacak
+    PFUser *user = selectedObject[@"senderUser"];
+    
+    ProfileAcceptCancelViewController *vc = [[ProfileAcceptCancelViewController alloc]initWithObject:user];
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 #pragma mark - ServerRequestListDelegate

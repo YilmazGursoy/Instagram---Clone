@@ -7,10 +7,18 @@
 //
 
 #import "ServerFriendEditing.h"
-#import "AppConstants.h"
 
 @implementation ServerFriendEditing
+-(instancetype)initWithDelegate:(id<SendAddFriendsRequestDelegate>)delegate{
 
+    if(self){
+        self.delegate = delegate;
+        return self;
+    }
+    else {
+        return false;
+    }
+}
 
 -(void)sendFriendsRequestToUser:(PFUser *)user{
     

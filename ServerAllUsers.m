@@ -7,16 +7,17 @@
 //
 
 #import "ServerAllUsers.h"
-#import <Parse/Parse.h>
 #import "BaseViewController.h"
 
 @implementation ServerAllUsers
 
 -(instancetype)initWithDelegate:(id<ServerAllUserDelegate>)delegate{
-    
-    self.delegate = delegate;
-    [self getAllUserInformations];
-    return self;
+    if(self){
+        self.delegate = delegate;
+        [self getAllUserInformations];
+        return self;
+    }
+    return false;
 }
 
 -(void)getAllUserInformations{

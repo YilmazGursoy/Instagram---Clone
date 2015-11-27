@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Server.h"
+
 @protocol ServerRequestListDelegate<NSObject>
 
 
@@ -28,7 +30,7 @@
 
 
 
-@interface ServerRequestsList : NSObject < ServerRequestListDelegate>
+@interface ServerRequestsList : Server < ServerRequestListDelegate>
 
 
 /**

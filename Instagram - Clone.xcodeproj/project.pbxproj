@@ -28,6 +28,8 @@
 		01B0899D1C05EFF40048D729 /* ServerRequestsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B0899C1C05EFF40048D729 /* ServerRequestsList.m */; };
 		01B089E31C07054A0048D729 /* ProfileAcceptCancelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B089E11C07054A0048D729 /* ProfileAcceptCancelViewController.m */; };
 		01B089E41C07054A0048D729 /* ProfileAcceptCancelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B089E21C07054A0048D729 /* ProfileAcceptCancelViewController.xib */; };
+		01B089E71C07CC070048D729 /* ServerOneUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B089E61C07CC070048D729 /* ServerOneUser.m */; };
+		01B089EA1C07CC420048D729 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B089E91C07CC420048D729 /* Server.m */; };
 		01EACAA81BFD440000AACA1B /* ServerFriendsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EACAA71BFD440000AACA1B /* ServerFriendsList.m */; };
 		01EACAAB1BFD442F00AACA1B /* FriendsHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EACAAA1BFD442F00AACA1B /* FriendsHelperMethods.m */; };
 		01F847221BD795B6005AAAE1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F847211BD795B6005AAAE1 /* HomeViewController.m */; };
@@ -98,6 +100,10 @@
 		01B089E01C07054A0048D729 /* ProfileAcceptCancelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileAcceptCancelViewController.h; sourceTree = "<group>"; };
 		01B089E11C07054A0048D729 /* ProfileAcceptCancelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileAcceptCancelViewController.m; sourceTree = "<group>"; };
 		01B089E21C07054A0048D729 /* ProfileAcceptCancelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileAcceptCancelViewController.xib; sourceTree = "<group>"; };
+		01B089E51C07CC070048D729 /* ServerOneUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOneUser.h; sourceTree = "<group>"; };
+		01B089E61C07CC070048D729 /* ServerOneUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerOneUser.m; sourceTree = "<group>"; };
+		01B089E81C07CC420048D729 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		01B089E91C07CC420048D729 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
 		01EACAA61BFD440000AACA1B /* ServerFriendsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerFriendsList.h; sourceTree = "<group>"; };
 		01EACAA71BFD440000AACA1B /* ServerFriendsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerFriendsList.m; sourceTree = "<group>"; };
 		01EACAA91BFD442F00AACA1B /* FriendsHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsHelperMethods.h; sourceTree = "<group>"; };
@@ -247,9 +253,19 @@
 			path = "Instagram - CloneUITests";
 			sourceTree = "<group>";
 		};
+		01B089EB1C07CC490048D729 /* MainClass */ = {
+			isa = PBXGroup;
+			children = (
+				01B089E81C07CC420048D729 /* Server.h */,
+				01B089E91C07CC420048D729 /* Server.m */,
+			);
+			name = MainClass;
+			sourceTree = "<group>";
+		};
 		01EACAAC1BFD443B00AACA1B /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				01B089EB1C07CC490048D729 /* MainClass */,
 				01703EC11BFBE72300359FF3 /* ServerAllUsers.h */,
 				01703EC21BFBE72300359FF3 /* ServerAllUsers.m */,
 				01EACAA61BFD440000AACA1B /* ServerFriendsList.h */,
@@ -258,6 +274,8 @@
 				01B0899C1C05EFF40048D729 /* ServerRequestsList.m */,
 				015C27D31BFFB30600731D4B /* ServerFriendEditing.h */,
 				015C27D41BFFB30600731D4B /* ServerFriendEditing.m */,
+				01B089E51C07CC070048D729 /* ServerOneUser.h */,
+				01B089E61C07CC070048D729 /* ServerOneUser.m */,
 			);
 			name = Server;
 			sourceTree = "<group>";
@@ -508,6 +526,7 @@
 			files = (
 				01F847331BD796AF005AAAE1 /* LoginViewController.m in Sources */,
 				01F8473F1BD81241005AAAE1 /* AppConstants.m in Sources */,
+				01B089E71C07CC070048D729 /* ServerOneUser.m in Sources */,
 				01B0899D1C05EFF40048D729 /* ServerRequestsList.m in Sources */,
 				01F8473A1BD7F557005AAAE1 /* BaseViewController.m in Sources */,
 				019AE93D1BFCF3EF00DFC91D /* UsersProfileViewController.m in Sources */,
@@ -524,6 +543,7 @@
 				01F8472B1BD795EE005AAAE1 /* FriendsActivityViewController.m in Sources */,
 				01B089E31C07054A0048D729 /* ProfileAcceptCancelViewController.m in Sources */,
 				015C27D51BFFB30600731D4B /* ServerFriendEditing.m in Sources */,
+				01B089EA1C07CC420048D729 /* Server.m in Sources */,
 				01703EC31BFBE72300359FF3 /* ServerAllUsers.m in Sources */,
 				01703EC61BFBE96500359FF3 /* AllUsersListViewController.m in Sources */,
 				01EACAAB1BFD442F00AACA1B /* FriendsHelperMethods.m in Sources */,

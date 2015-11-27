@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Parse/Parse.h>
-#import "AppConstants.h"
+#import "Server.h"
+
 
 @protocol ServerFriendsListDelegate <NSObject>
 
@@ -29,13 +29,21 @@
 
 //Interface
 
-@interface ServerFriendsList : NSObject < ServerFriendsListDelegate >
+@interface ServerFriendsList : Server < ServerFriendsListDelegate >
 
 @property (strong, nonatomic) id<ServerFriendsListDelegate> delegate;
 
+
+
+
 /**
- *  Bu metot bize PFRelation metodu ile bağlı olan güncel arkadaşlarımızı vermektedir
+ *  İnitialize ve delegate yapısı oluşturulur
+ *
+ *  @param delegate kullanılacak delegate ataması default = self
+ *
+ *  @return donus tipi instancetype
  */
--(void)getAllFriends;
+-(instancetype)initWithDelegate:(id<ServerFriendsListDelegate>)delegate;
+
 
 @end

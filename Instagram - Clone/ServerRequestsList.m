@@ -7,13 +7,16 @@
 //
 
 #import "ServerRequestsList.h"
-#import <Parse/Parse.h>
+
 
 @implementation ServerRequestsList
 
 -(instancetype)initWithDelegate:(id<ServerRequestListDelegate>)delegate{
-    self.delegate = delegate;
-    [self getRequestsUsers];
+    if(self) {
+        self.delegate = delegate;
+        [self getRequestsUsers];
+        return self;
+    }
     return self;
 }
 

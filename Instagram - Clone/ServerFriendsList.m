@@ -16,6 +16,19 @@
 
 @implementation ServerFriendsList
 
+-(instancetype)initWithDelegate:(id<ServerFriendsListDelegate>)delegate{
+    if(self) {
+        self.delegate = delegate;
+        [self getAllFriends];
+        return self;
+    }
+    return false;
+}
+
+/**
+ *  Bu metot bize PFRelation metodu ile bağlı olan güncel arkadaşlarımızı vermektedir
+ */
+
 -(void)getAllFriends{
     
     self.friendsRelation = [[PFUser currentUser] objectForKey:FriendsRelationID];
@@ -23,7 +36,7 @@
     PFQuery *query = [self.friendsRelation query];
     
     [query orderByAscending:@"username"];
-
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
        
         if(error) {
@@ -39,4 +52,8 @@
         [_delegate getServerFriendsListFailed];
     }
 }
+
+
+
+
 @end

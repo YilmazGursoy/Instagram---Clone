@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Server.h"
 
 @protocol ServerAllUserDelegate <NSObject>
 
@@ -16,7 +17,7 @@
 @end
 
 
-@interface ServerAllUsers : NSObject
+@interface ServerAllUsers : Server
 
 /**
 *  Metot hem initialize eder hem delegate i initialize eder hemde getAllUser metodunu çağırır.
