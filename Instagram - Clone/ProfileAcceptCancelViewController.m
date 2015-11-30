@@ -13,8 +13,9 @@
 @end
 
 @implementation ProfileAcceptCancelViewController
--(instancetype)initWithObject:(PFUser *)user{
+-(instancetype)initWithObject:(PFUser *)user AndMessages:(NSString *)message{
     self.showingUser = user;
+    self.sendingMessage = message;
     self.serverOneUserObject = [[ServerOneUser alloc]initWithDelegate:self];
     if(self)
         return self;
@@ -58,8 +59,15 @@
 
 -(void)setUpUI{
     self.requestSenderUsername.text = self.showingUser.username;
-    self.requestSenderUserMessage.text = [self.showingUser objectForKey:@"ProfileDescKey"];
-#error Yalnışlıkla istek ekranını atacagıma direk user profile' i atılmış burada ayrıca user'ın göndermiş oldugu sendDescription mesajıda eklenilecek bu mesaja o da ayrı alınabilir
+    self.requestSenderUserMessage.text = self.sendingMessage;
+    PFFile *profileImage = self.showingUser[@"ProfilePictureKey"];
+    [profileImage getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+        if(error) {
+            [self showAlertMessage:@"Profil Fotografı yüklenirken bir hata ile karşılaşıldı" andPop:false];
+        } else {
+            self.requestSenderUserProfilePicture.image = [UIImage imageWithData:data];
+        }
+    }];
 }
 
 @end

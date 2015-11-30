@@ -563,7 +563,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21P-Mz-n8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492.5" y="-2232"/>
+            <point key="canvasLocation" x="1708.5" y="-2232"/>
         </scene>
         <!--Friends Activity View Controller-->
         <scene sceneID="4c9-IU-kHx">
@@ -591,7 +591,6 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.32843452639999998" green="1" blue="0.26481750479999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">

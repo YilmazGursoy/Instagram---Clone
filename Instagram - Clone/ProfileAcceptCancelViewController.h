@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *requestSenderUsername;
 @property (strong, nonatomic) IBOutlet UITextView *requestSenderUserMessage;
 @property (strong, nonatomic) PFUser *showingUser;
+@property (strong, nonatomic) NSString *sendingMessage;
 @property (strong, nonatomic) ServerOneUser *serverOneUserObject;
 
 - (IBAction)acceptButtonPressed:(UIButton *)sender;
@@ -28,6 +29,6 @@
  *
  *  @return donus tipi instancetype
  */
--(instancetype)initWithObject:(PFUser*)user;
+-(instancetype)initWithObject:(PFUser*)user AndMessages:(NSString*)message;
 
 @end

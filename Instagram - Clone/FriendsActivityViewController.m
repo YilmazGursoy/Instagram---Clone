@@ -57,9 +57,17 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     PFObject *selectedObject = self.allRequests[indexPath.row];
     PFUser *user = selectedObject[@"senderUser"];
+    PFFile *file = selectedObject[@"file"];
     
-    ProfileAcceptCancelViewController *vc = [[ProfileAcceptCancelViewController alloc]initWithObject:user];
-    [self.navigationController pushViewController:vc animated:true];
+    [file getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+        if(!error) {
+            NSString *sendingMessage = [[NSString alloc]initWithData:data encoding:NSASCIIStringEncoding];
+            ProfileAcceptCancelViewController *vc = [[ProfileAcceptCancelViewController alloc]initWithObject:user AndMessages:sendingMessage];
+            [self.navigationController pushViewController:vc animated:true];
+        }
+    }];
+    
+    
 }
 
 #pragma mark - ServerRequestListDelegate
