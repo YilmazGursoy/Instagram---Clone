@@ -409,7 +409,12 @@
 				TargetAttributes = {
 					015B6A7B1BD57F93001990A6 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 3BH3ADD3PS;
+						DevelopmentTeam = V7XB57W8QK;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					015B6A971BD57F93001990A6 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -689,10 +694,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Instagram",
+					"-",
+					Clone,
+				);
 				INFOPLIST_FILE = "Instagram - Clone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yilmaz.Instagram---Clone";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yilmaz.Deneme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -702,10 +715,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Instagram",
+					"-",
+					Clone,
+				);
 				INFOPLIST_FILE = "Instagram - Clone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yilmaz.Instagram---Clone";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yilmaz.Deneme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
