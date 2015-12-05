@@ -23,8 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.changeImageSizeHelper = [[ImagesHelperMethods alloc]init];
-    self.imagePickerHelperObject = [[ImagePickerControllerHelperMethod alloc]init];
-    self.imagePickerHelperObject.delegate = self;
+    self.imagePickerHelperObject = [[ImagePickerControllerHelperMethod alloc]initWithDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,11 +52,17 @@
 
         NSData *imageData = UIImagePNGRepresentation(self.profileImage);
         PFFile *imageFile = [PFFile fileWithName:@"profileImage.png" data:imageData];
+        
+        NSData *littleImage = UIImagePNGRepresentation(self.littleImage);
+        PFFile *littleImageFile = [PFFile fileWithName:@"littleProfileImage.png" data:littleImage];
+        
+        [littleImageFile saveInBackground];
         [imageFile saveInBackground];
-
+        
         [newUser setObject:self.profileDescTextField.text forKey:ProfileDescKey];
         
         [newUser setObject:imageFile forKey:ProfilePictureKey];
+        [newUser setObject:littleImageFile forKey:ProfileLittlePictureKey];
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
             if(error) {
                 [self showAlertMessage:[NSString stringWithFormat:@"Üyeliğinizde bir sorun oluştu, %@",error] andPop:false];

@@ -53,6 +53,8 @@
     
     cell.textLabel.text = object[@"senderName"];
     
+    
+    
     return cell;
 }
 

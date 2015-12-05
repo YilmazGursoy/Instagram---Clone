@@ -42,11 +42,25 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FriendsCell" forIndexPath:indexPath];
-
+    cell.imageView.image = nil;
     PFUser *user = self.allUsersArray[indexPath.row];
     if(![[PFUser currentUser].objectId isEqual:user.objectId]) {
         cell.textLabel.text = user.username;
     }
+    PFFile *littleProfileImage = [user objectForKey:ProfileLittlePictureKey];
+    [littleProfileImage getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+        UIImage *littleImage = [UIImage imageWithData:data];
+        if(!error){
+            if (littleImage) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    UITableViewCell *updateCell = (id)[tableView cellForRowAtIndexPath:indexPath];
+                    if (updateCell)
+                        updateCell.imageView.image = littleImage;
+                        [updateCell setNeedsLayout];
+                });
+            }
+            }
+        }];
     return cell;
 }
 

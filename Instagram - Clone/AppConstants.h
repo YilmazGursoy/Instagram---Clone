@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #define ProfilePictureKey @"ProfilePictureKey"
+#define ProfileLittlePictureKey @"ProfileLittlePicture"
 #define ProfileDescKey @"ProfileDescKey"
 #define FriendsCellIdentifier @"FriendsCell"
 #define ProfileViewControllerID @"ProfileViewControllerID"

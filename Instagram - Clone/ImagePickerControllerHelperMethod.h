@@ -35,4 +35,12 @@
 -(void)presentImagePickerControllerAndGetImage:(UIViewController*)vc;
 @property (strong, nonatomic) id<ImagePickerHelper> delegate;
 
+/**
+ *  Init methodu
+ *
+ *  @param delegate gondermek istediginiz delegate method
+ *
+ *  @return donus tipi self, instancetype
+ */
+-(instancetype)initWithDelegate:(id<ImagePickerHelper>)delegate;
 @end

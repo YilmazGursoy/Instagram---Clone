@@ -11,6 +11,13 @@
 
 @implementation ImagePickerControllerHelperMethod
 
+-(instancetype)initWithDelegate:(id<ImagePickerHelper>)delegate{
+    if(self) {
+        self.delegate = delegate;
+    }
+    return self;
+}
+
 -(void)presentImagePickerControllerAndGetImage:(UIViewController*)vc{
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
     imagePicker.delegate = self;

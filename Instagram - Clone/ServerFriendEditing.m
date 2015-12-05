@@ -56,6 +56,9 @@
             }];
         }
     }];
+    
+    
+    
 }
 
 -(void)isISendRequestThisUser:(PFUser*)someoneUser{

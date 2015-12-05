@@ -16,10 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
     [Parse setApplicationId:@"AwkqYhgFWpfgXqa6EVwxWabhkgaLIkaoHJd9Y5NQ"
                   clientKey:@"Q5NuQ1Xw2nWRXQVITGIIaYrmqpyyZHPcgWNtdJmA"];
-
+    
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
                                                     UIUserNotificationTypeBadge |
                                                     UIUserNotificationTypeSound);
@@ -28,8 +28,6 @@
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
     
-
-
     return YES;
 }
 

@@ -60,7 +60,7 @@
 -(void)setUpUI{
     self.requestSenderUsername.text = self.showingUser.username;
     self.requestSenderUserMessage.text = self.sendingMessage;
-    PFFile *profileImage = self.showingUser[@"ProfilePictureKey"];
+    PFFile *profileImage = self.showingUser[ProfilePictureKey];
     [profileImage getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
         if(error) {
             [self showAlertMessage:@"Profil Fotografı yüklenirken bir hata ile karşılaşıldı" andPop:false];
