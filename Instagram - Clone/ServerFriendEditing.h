@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SendAddFriendRequestHelper.h"
 #import "Server.h"
 
 @protocol SendAddFriendsRequestDelegate <NSObject>
@@ -31,7 +32,7 @@
 
 @interface ServerFriendEditing : Server
 @property (strong, nonatomic) id<SendAddFriendsRequestDelegate> delegate;
-
+@property (strong, nonatomic) SendAddFriendRequestHelper *pushNotificationObject;
 
 /**
  *  Herhangi bir kullanıcıya arkadaşlık isteği atmamıza yarar

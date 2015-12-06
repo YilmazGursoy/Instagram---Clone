@@ -8,11 +8,13 @@
 
 #import "ServerFriendEditing.h"
 
+
 @implementation ServerFriendEditing
 -(instancetype)initWithDelegate:(id<SendAddFriendsRequestDelegate>)delegate{
 
     if(self){
         self.delegate = delegate;
+        self.pushNotificationObject = [[SendAddFriendRequestHelper alloc]init];
         return self;
     }
     else {
@@ -57,7 +59,7 @@
         }
     }];
     
-    
+    [self.pushNotificationObject sendUserPushNotificationToRequest:user];
     
 }
 

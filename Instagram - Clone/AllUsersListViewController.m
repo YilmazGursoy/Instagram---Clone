@@ -83,10 +83,9 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    PFUser *sendingUser = self.allUsersArray[indexPath.row];
    
+    PFUser *sendingUser = self.allUsersArray[indexPath.row];
     [self openUserProfile:sendingUser];
-    
     
 }
 -(void)setupDelegatesAndSendRequest{

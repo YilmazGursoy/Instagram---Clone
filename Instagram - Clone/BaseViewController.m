@@ -21,6 +21,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    if([PFUser currentUser]) {
+        PFInstallation *installation = [PFInstallation currentInstallation];
+        installation[@"user"] = [PFUser currentUser];
+        [installation saveInBackground];
+        
+    }
+    
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

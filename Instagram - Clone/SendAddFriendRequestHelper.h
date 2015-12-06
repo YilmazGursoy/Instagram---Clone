@@ -37,4 +37,11 @@
  *  @param user Istek atılıp atılmadıgı kontrol edilecek user
  */
 -(void)controlRequestList:(PFUser*)user;
+
+/**
+ *  Bu fonksiyon secilmiş olan kullanıcıya push notification atmamızı saglar
+ *
+ *  @param sendingUser push notification'un atılması istenen kullanıcı
+ */
+-(void)sendUserPushNotificationToRequest:(PFUser*)sendingUser;
 @end

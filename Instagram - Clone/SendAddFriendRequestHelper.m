@@ -73,4 +73,18 @@
 }
 
 
+-(void)sendUserPushNotificationToRequest:(PFUser *)sendingUser{
+
+    // Create our Installation query
+    PFQuery *pushQuery = [PFInstallation query];
+    [pushQuery whereKey:@"user" equalTo:sendingUser[@"user"]];
+    
+    // Send push notification to query
+    PFPush *push = [[PFPush alloc] init];
+    [push setQuery:pushQuery]; // Set our Installation query
+    [push setMessage:[NSString stringWithFormat:@"Merhaba %@ seni arkadaş olarak eklemek istiyorum :)",sendingUser.username]];
+    [push sendPushInBackground];
+
+}
+
 @end
