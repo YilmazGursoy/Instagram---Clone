@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram - Clone/SendAddFriendRequestHelper.m"
-            timestampString = "469912811.602252"
+            timestampString = "473374740.004638"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "-getSendingRequestUserList"
             landmarkType = "5">
          </BreakpointContent>
@@ -94,11 +94,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram - Clone/ProfileAcceptCancelViewController.m"
-            timestampString = "470613967.989369"
+            timestampString = "473541553.330324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "-succededGetUserInformation:"
             landmarkType = "5">
          </BreakpointContent>

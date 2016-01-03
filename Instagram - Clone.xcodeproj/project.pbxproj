@@ -30,6 +30,7 @@
 		01B089E41C07054A0048D729 /* ProfileAcceptCancelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B089E21C07054A0048D729 /* ProfileAcceptCancelViewController.xib */; };
 		01B089E71C07CC070048D729 /* ServerOneUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B089E61C07CC070048D729 /* ServerOneUser.m */; };
 		01B089EA1C07CC420048D729 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B089E91C07CC420048D729 /* Server.m */; };
+		01E8DC3B1C373932007D13C8 /* ServerUserRelation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E8DC3A1C373932007D13C8 /* ServerUserRelation.m */; };
 		01EACAA81BFD440000AACA1B /* ServerFriendsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EACAA71BFD440000AACA1B /* ServerFriendsList.m */; };
 		01EACAAB1BFD442F00AACA1B /* FriendsHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EACAAA1BFD442F00AACA1B /* FriendsHelperMethods.m */; };
 		01F847221BD795B6005AAAE1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F847211BD795B6005AAAE1 /* HomeViewController.m */; };
@@ -104,6 +105,8 @@
 		01B089E61C07CC070048D729 /* ServerOneUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerOneUser.m; sourceTree = "<group>"; };
 		01B089E81C07CC420048D729 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
 		01B089E91C07CC420048D729 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
+		01E8DC391C373932007D13C8 /* ServerUserRelation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerUserRelation.h; sourceTree = "<group>"; };
+		01E8DC3A1C373932007D13C8 /* ServerUserRelation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerUserRelation.m; sourceTree = "<group>"; };
 		01EACAA61BFD440000AACA1B /* ServerFriendsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerFriendsList.h; sourceTree = "<group>"; };
 		01EACAA71BFD440000AACA1B /* ServerFriendsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerFriendsList.m; sourceTree = "<group>"; };
 		01EACAA91BFD442F00AACA1B /* FriendsHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsHelperMethods.h; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 				015C27D41BFFB30600731D4B /* ServerFriendEditing.m */,
 				01B089E51C07CC070048D729 /* ServerOneUser.h */,
 				01B089E61C07CC070048D729 /* ServerOneUser.m */,
+				01E8DC391C373932007D13C8 /* ServerUserRelation.h */,
+				01E8DC3A1C373932007D13C8 /* ServerUserRelation.m */,
 			);
 			name = Server;
 			sourceTree = "<group>";
@@ -540,6 +545,7 @@
 				015B6A811BD57F93001990A6 /* main.m in Sources */,
 				015C27CF1BFE8AD300731D4B /* SendAddFriendRequestHelper.m in Sources */,
 				012A2E291BFA6CCC00A922B3 /* ImagesCollectionViewCell.m in Sources */,
+				01E8DC3B1C373932007D13C8 /* ServerUserRelation.m in Sources */,
 				01F847221BD795B6005AAAE1 /* HomeViewController.m in Sources */,
 				0147C4501BFBCAFB00F0E22A /* FriendsListTableViewCell.m in Sources */,
 				01F8472E1BD795F7005AAAE1 /* ProfileViewController.m in Sources */,
@@ -625,7 +631,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ismail Ciftci (ZH86H2TVLU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ismail Ciftci (ZH86H2TVLU)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -668,7 +675,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ismail Ciftci (ZH86H2TVLU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ismail Ciftci (ZH86H2TVLU)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -702,6 +710,7 @@
 					Clone,
 				);
 				INFOPLIST_FILE = "Instagram - Clone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yilmaz.Deneme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -723,6 +732,7 @@
 					Clone,
 				);
 				INFOPLIST_FILE = "Instagram - Clone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yilmaz.Deneme;
 				PRODUCT_NAME = "$(TARGET_NAME)";

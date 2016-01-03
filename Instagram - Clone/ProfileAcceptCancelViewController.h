@@ -8,6 +8,8 @@
 
 #import "ServerOneUser.h"
 #import "BaseViewController.h"
+#import "ServerUserRelation.h"
+#import "SendAddFriendRequestHelper.h"
 
 @interface ProfileAcceptCancelViewController : BaseViewController <ServerOneUserDelegate>
 
@@ -18,6 +20,7 @@
 @property (strong, nonatomic) PFUser *showingUser;
 @property (strong, nonatomic) NSString *sendingMessage;
 @property (strong, nonatomic) ServerOneUser *serverOneUserObject;
+@property (strong, nonatomic) ServerUserRelation *serverUserRelation;
 
 - (IBAction)acceptButtonPressed:(UIButton *)sender;
 - (IBAction)hideButtonPressed:(UIButton *)sender;

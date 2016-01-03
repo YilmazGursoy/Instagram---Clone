@@ -7,6 +7,8 @@
 //
 
 #import "ProfileAcceptCancelViewController.h"
+#import "FriendsActivityViewController.h"
+
 
 @interface ProfileAcceptCancelViewController ()
 
@@ -17,6 +19,8 @@
     self.showingUser = user;
     self.sendingMessage = message;
     self.serverOneUserObject = [[ServerOneUser alloc]initWithDelegate:self];
+    self.serverUserRelation = [[ServerUserRelation alloc]init];
+    
     if(self)
         return self;
     else
@@ -34,11 +38,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 - (IBAction)acceptButtonPressed:(UIButton *)sender {
+    
+    [self.serverUserRelation createUserRelationFromMeTo:self.showingUser];
+    
 }
 
 - (IBAction)hideButtonPressed:(UIButton *)sender {
+    
 }
 
 
@@ -47,7 +54,6 @@
 -(void)succededGetUserInformation:(PFUser *)user{
     self.showingUser = user;
     [self setUpUI];
-    
 }
 
 -(void)failedGetUserInformation{
