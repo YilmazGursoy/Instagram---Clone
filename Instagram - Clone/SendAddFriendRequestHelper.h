@@ -44,4 +44,7 @@
  *  @param sendingUser push notification'un atılması istenen kullanıcı
  */
 -(void)sendUserPushNotificationToRequest:(PFUser*)sendingUser;
+
+
+
 @end

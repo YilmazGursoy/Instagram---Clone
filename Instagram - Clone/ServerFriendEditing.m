@@ -7,6 +7,7 @@
 //
 
 #import "ServerFriendEditing.h"
+#import "RequestListHelperMethods.h"
 
 
 @implementation ServerFriendEditing
@@ -67,7 +68,7 @@
 //#error Fonskiyon tamamlanıldı artık istek attıklarını kontrol ediyor şimdi de yalnızca karşı kullanıcının onaylayıp ardından bu kullanıcının o onaya göre kendi listesini güncellemesini isteyecegiz bunun için bir tane requests adında bir yapı oluşturacagız ve bu yapıda alan kısmından biz kendi ID mizi sorgulatacagız ve eşleşme olunca o objenin boolean sonucuna bakacagız boolean sonuca göre de listemizi güncelleyecegiz
     PFUser *user = [PFUser currentUser];
     
-        NSArray *waitingList = user[WaitingRequestsListID];
+    NSArray *waitingList = [RequestListHelperMethods getSendingRequestUserList];
     int control = 0;
     for(NSString *ID in waitingList) {
         if([ID isEqualToString:someoneUser.objectId]) {

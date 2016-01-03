@@ -15,6 +15,7 @@
 #define ProfileViewControllerID @"ProfileViewControllerID"
 #define FriendsRelationID @"FriendsRelation"
 #define WaitingRequestsListID @"WaitingRequestsList"
+#define RequestsClassID @"Requests"
 @interface AppConstants : NSObject
 
 @end
