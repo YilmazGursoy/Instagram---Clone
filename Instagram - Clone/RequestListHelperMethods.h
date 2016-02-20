@@ -7,10 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SendAddFriendRequestHelper.h"
-#import <Parse/Parse.h>
 
-@interface RequestListHelperMethods : SendAddFriendRequestHelper
+#import <Parse/Parse.h>
+@protocol RequestListHelperMethodDelegate<NSObject>
+
+@required
+/**
+ *  Metot RequestListHelper classının içerisinde olan iki tane unsynchrosous metodu tek tek bekler ve en son veriler parse backendine yazıldıktan sonra çağırılır yani kod burada durur
+ */
+-(void)getAllUserListsFromParseBackend:(NSMutableArray*)allUsers control:(BOOL)boolean;
+
+@end
+
+
+
+
+
+@interface RequestListHelperMethods : NSObject<RequestListHelperMethodDelegate>
+
+@property (strong, nonatomic) id<RequestListHelperMethodDelegate> delegate;
 
 
 /**
@@ -18,7 +33,7 @@
  *
  *  @return Yeni waiting request arrayi
  */
-+(NSMutableArray*)getSendingRequestUserList;
+-(void)getSendingRequestUserListWithControl:(BOOL)boolean;
 
 
 /**
@@ -26,6 +41,21 @@
  *
  *  @param currentList Parse backendine yazılacak yeni liste
  */
-+(void)setAllChangesParseBackend:(NSMutableArray*)currentList;
+-(void)setAllChangesParseBackend:(NSMutableArray*)currentList withControl:(BOOL)boolean;
+
+
+/**
+ *  Method Singleton patterndır ve gorevi bu objejin çağırdıgı tüm fonksiyonları sanki class fonksiyonuymuş gibi çağırmaktır
+ *
+ *  @return  statik RequestListHelperMethods objesi dondurmektedir
+ */
+-(instancetype)initWithDelegate:(id)delegate;
+
+/**
+ *  Her defasında yeniden userList set get edilme işlemleri ile ugrasmak yerine direk statik variable çekilmektedir statik array ise set metodundan hemen sonra set edilmektedir
+ *
+ *  @return statik array user list
+ */
+-(NSMutableArray*) getStaticUserList;
 
 @end

@@ -11,17 +11,20 @@
 #import "UsersProfileViewController.h"
 
 @interface AllUsersListViewController ()
+
 @end
+
+static PFUser *controlUser;
 
 @implementation AllUsersListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.allUsersObject = [[ServerAllUsers alloc]initWithDelegate:self];
+    [self controlIfNewUserLogin];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self setupDelegatesAndSendRequest];
+    [self controlIfNewUserLogin];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -63,9 +66,17 @@
         }];
     return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    PFUser *sendingUser = self.allUsersArray[indexPath.row];
+    [self openUserProfile:sendingUser];
+    
+}
+
+#pragma mark - ServerAllUserDelegate
 
 -(void)getAllUsersResponseSuccess:(NSArray *)allUsers{
-    
+    [self setupDelegatesAndSendRequest];
     NSMutableArray *allUsersWihoutMe = [[NSMutableArray alloc]init];
     
     for(PFUser *user in allUsers) {
@@ -75,22 +86,34 @@
     }
     self.allUsersArray = allUsersWihoutMe;
     [self.tableView reloadData];
-    
-    
-}
--(void)getAllUsersResponseFailed{
-    [self showAlertMessage:@"Kullanıcılara erişilirken bir problem gerçekleşti" andPop:false];
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   
-    PFUser *sendingUser = self.allUsersArray[indexPath.row];
-    [self openUserProfile:sendingUser];
-    
+-(void)getAllUsersResponseFailed{
+
+    [self showAlertMessage:@"Kullanıcılara erişilirken bir problem gerçekleşti" andPop:false];
+
 }
+
+#pragma mark - HelperFunctions
+
+-(void)controlIfNewUserLogin{
+    if(controlUser == nil) {
+        controlUser = [PFUser currentUser];
+        self.allUsersObject = [[ServerAllUsers alloc]initWithDelegate:self];
+    } else {
+        if(![controlUser.objectId isEqualToString:[PFUser currentUser].objectId]) {
+            //Eger yeni bir user login olduysa
+            self.allUsersObject = [[ServerAllUsers alloc]initWithDelegate:self];
+        } else {
+            //Hala aynı user geliyorsa
+        }
+    }
+}
+
 -(void)setupDelegatesAndSendRequest{
     self.tableView.delegate =self;
     self.tableView.dataSource = self;
 }
+
 @end
 

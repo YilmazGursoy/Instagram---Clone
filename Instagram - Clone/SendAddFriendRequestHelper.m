@@ -10,6 +10,10 @@
 #import "AppConstants.h"
 #import "ServerFriendEditing.h"
 #import "RequestListHelperMethods.h"
+@interface SendAddFriendRequestHelper()<RequestListHelperMethodDelegate>
+@property (strong, nonatomic) PFUser *controlUser;
+@property (strong, nonatomic) RequestListHelperMethods *requestHelperObject;
+@end
 
 @implementation SendAddFriendRequestHelper
 
@@ -17,25 +21,21 @@
 //Public helper methods
 
 -(void)addRequestListToThisUser:(PFUser*)user{
+
+    _requestHelperObject = [[RequestListHelperMethods alloc]initWithDelegate:self];
+
+    _controlUser = user;
     
-    NSMutableArray *currentWaitingRequestsList = [RequestListHelperMethods getSendingRequestUserList];
-    if(!currentWaitingRequestsList) {
-        currentWaitingRequestsList = [[NSMutableArray alloc]init];
-    }
-    
-    [currentWaitingRequestsList addObject:user.objectId];
-    
-    [RequestListHelperMethods setAllChangesParseBackend:currentWaitingRequestsList];
+    [_requestHelperObject getSendingRequestUserListWithControl:true];
     
 }
 -(void)removeRequestListToThisUser:(PFUser*)user{
 
-    NSMutableArray *currentWaitingRequestsList = [RequestListHelperMethods getSendingRequestUserList];
+    _requestHelperObject = [[RequestListHelperMethods alloc]initWithDelegate:self];
     
-    [currentWaitingRequestsList removeObject:user.objectId];
+    _controlUser = user;
     
-    [RequestListHelperMethods setAllChangesParseBackend:currentWaitingRequestsList];
-
+    [_requestHelperObject getSendingRequestUserListWithControl:false];
 }
 
 -(void)controlRequestList:(PFUser*)user{
@@ -43,10 +43,37 @@
 #warning Delegate metotlar ayarlanacak bir hata var hatanın sebebi muhtemelen ServerFriendEditing classında biz protocol çağırıyoruz ancak bu çağırma bizim helper classımızın içerisinde gerçekleşiyor ve bu yuzden biz ana programda birşey alamıyoruz
 }
 
-
 //Private helper methods
 
+-(void)getAllUserListsFromParseBackend:(NSMutableArray *)allUsers control:(BOOL)boolean{
+    
+    NSMutableArray *availableAllUserArray = allUsers;
+    
+    if(boolean){
+        if(!availableAllUserArray) {
+            availableAllUserArray = [[NSMutableArray alloc]init];
+        }
+        
+        [availableAllUserArray addObject:_controlUser.objectId];
+        if(![availableAllUserArray containsObject:_controlUser.objectId]) {
+            [_requestHelperObject setAllChangesParseBackend:availableAllUserArray withControl:true];
+        }
 
+ 
+    } else {
+        
+        [availableAllUserArray removeObject:_controlUser.objectId];
+        
+        if(![availableAllUserArray containsObject:_controlUser.objectId]) {
+            
+            [_requestHelperObject setAllChangesParseBackend:availableAllUserArray withControl:false];
+        
+        }
+
+        
+        
+    }
+}
 
 
 -(void)sendUserPushNotificationToRequest:(PFUser *)sendingUser{

@@ -34,13 +34,6 @@
 @property (strong, nonatomic) id<SendAddFriendsRequestDelegate> delegate;
 @property (strong, nonatomic) SendAddFriendRequestHelper *pushNotificationObject;
 
-/**
- *  Herhangi bir kullanıcıya arkadaşlık isteği atmamıza yarar
- *
- *  @param user İstek atmak istediğimiz kullanıcı
- */
--(void)sendFriendsRequestToUser:(PFUser*)user;
-
 
 /**
  *  Bu fonksiyon herhangi bir kullanıcıya istek atıl atılmadıgını gösterir böylece eğer istek atılmışsa o kullanıcıya tekrar istek atma butonu aktif olmaz

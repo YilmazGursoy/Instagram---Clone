@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "FriendsHelperMethods.h"
+#import "ServerFriendEditing+SendMesNotif.h"
 
 
 

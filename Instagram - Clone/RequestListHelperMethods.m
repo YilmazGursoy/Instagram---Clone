@@ -9,11 +9,36 @@
 #import "RequestListHelperMethods.h"
 #import "AppConstants.h"
 
+@interface RequestListHelperMethods()
+
+@property (strong, nonatomic) RequestListHelperMethods *requestObject;
+
+@end
+
+static NSMutableArray *allList;
+
 @implementation RequestListHelperMethods
 
+#pragma mark - SingletonPattern
 
-+(NSMutableArray*)getSendingRequestUserList{
+
+
+-(instancetype)initWithDelegate:(id)delegate{
     
+    if( self ) {
+
+        _requestObject = [[RequestListHelperMethods alloc]init];
+        
+        _requestObject.delegate = delegate;
+    
+    }
+    
+    return self;
+}
+
+
+
+-(void)getSendingRequestUserListWithControl:(BOOL)boolean{
     
     PFUser *currentUser = [PFUser currentUser];
     
@@ -31,15 +56,12 @@
                     [newUserIDs addObject:newObject[@"receipentsID"]];
                 }
             }
-            [self setAllChangesParseBackend:newUserIDs];
+            [self setAllChangesParseBackend:newUserIDs withControl:boolean];
         }
     }];
-    
-    return newUserIDs;
-    
 }
 
-+(void)setAllChangesParseBackend:(NSMutableArray*)currentList{
+-(void)setAllChangesParseBackend:(NSMutableArray*)currentList withControl:(BOOL)boolean{
     
     PFUser *currentUser = [PFUser currentUser];
     
@@ -50,9 +72,19 @@
             NSLog(@"There is an error : -(void)addRequestListToThisUser:(PFUser*)user");
         } else {
             NSLog(@"Request listesine obje yükleme başarılı");
+            if(_requestObject) {
+                
+                allList = currentList;
+                
+                [_requestObject.delegate getAllUserListsFromParseBackend:currentList control:boolean];
+            }
         }
     }];
 }
 
+-(NSMutableArray *)getStaticUserList{
+
+    return allList;
+}
 
 @end

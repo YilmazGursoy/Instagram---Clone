@@ -78,8 +78,6 @@
 
 #pragma mark - ImagePickerHelper Delegate methods
 
-#warning Buraya yeni kaydedilen kullanıcının profil fotografı ön izlemesi olarak minik bir 40*40 lık resmide kaydedilecek
-
 -(void)didFailed{
     
 }
