@@ -21,6 +21,7 @@
     }
 
 }
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if([PFUser currentUser]) {

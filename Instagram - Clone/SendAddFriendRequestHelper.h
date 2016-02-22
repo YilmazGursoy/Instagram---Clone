@@ -31,12 +31,6 @@
  */
 -(void)removeRequestListToThisUser:(PFUser*)user;
 
-/**
- *  Seçili user a herhangibir istek atıldımı onu belirtir
- *
- *  @param user Istek atılıp atılmadıgı kontrol edilecek user
- */
--(void)controlRequestList:(PFUser*)user;
 
 /**
  *  Bu fonksiyon secilmiş olan kullanıcıya push notification atmamızı saglar

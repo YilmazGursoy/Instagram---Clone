@@ -13,9 +13,10 @@
 #define ProfileDescKey @"ProfileDescKey"
 #define FriendsCellIdentifier @"FriendsCell"
 #define ProfileViewControllerID @"ProfileViewControllerID"
-#define FriendsRelationID @"FriendsRelation"
+#define FriendsRelationID @"friendsRelation"
 #define WaitingRequestsListID @"WaitingRequestsList"
 #define RequestsClassID @"Requests"
+#define AllUserListViewControllerID @"AllUserFriendsListViewControllerID"
 @interface AppConstants : NSObject
 
 @end

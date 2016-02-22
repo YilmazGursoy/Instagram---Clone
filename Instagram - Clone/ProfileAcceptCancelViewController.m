@@ -47,7 +47,6 @@
 - (IBAction)hideButtonPressed:(UIButton *)sender {
     
     [self.serverUserRelation deleteUserRequestFromRequests:self.showingUser];
-    
 }
 
 

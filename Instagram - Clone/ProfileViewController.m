@@ -9,6 +9,7 @@
 #import "ProfileViewController.h"
 #import "FriendsHelperMethods.h"
 #import "ServerFriendEditing+SendMesNotif.h"
+#import "AllUsersListViewController.h"
 
 
 
@@ -174,5 +175,16 @@
     }
     
 
+}
+- (IBAction)allRelationFriendsList:(UIButton *)sender {
+    
+    
+    AllUsersListViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:AllUserListViewControllerID];
+    
+    vc.isMyFriendlist = true;
+    
+    [self.navigationController pushViewController:vc animated:true];
+    
+    
 }
 @end

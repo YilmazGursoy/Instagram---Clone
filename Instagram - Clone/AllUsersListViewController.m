@@ -9,22 +9,41 @@
 #import "AllUsersListViewController.h"
 #import "ProfileViewController.h"
 #import "UsersProfileViewController.h"
+#import "ServerFriendsList.h"
 
-@interface AllUsersListViewController ()
+#define borderForMyFriendsList 45
+@interface AllUsersListViewController ()<ServerFriendsListDelegate>
+
+@property (strong, nonatomic) ServerFriendsList *friendsListObject;
 
 @end
 
-static PFUser *controlUser;
+
+static BOOL controlNumberForViewWillDid;
 
 @implementation AllUsersListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    controlNumberForViewWillDid = false;
     [self controlIfNewUserLogin];
 }
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self controlIfNewUserLogin];
+    if(controlNumberForViewWillDid) {
+        [self controlIfNewUserLogin];
+    }
+    
+}
+/**
+ *  Fonksiyon ViewDidLoad metodu ile ViewWillAppear fonksiyonlarının sürekli iki kez çalışmaması için kontrol fonskiyonudur
+ *
+ *  @param animated <#animated description#>
+ */
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    controlNumberForViewWillDid = true;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -47,8 +66,11 @@ static PFUser *controlUser;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FriendsCell" forIndexPath:indexPath];
     cell.imageView.image = nil;
     PFUser *user = self.allUsersArray[indexPath.row];
+    
     if(![[PFUser currentUser].objectId isEqual:user.objectId]) {
+    
         cell.textLabel.text = user.username;
+    
     }
     PFFile *littleProfileImage = [user objectForKey:ProfileLittlePictureKey];
     [littleProfileImage getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
@@ -97,22 +119,39 @@ static PFUser *controlUser;
 #pragma mark - HelperFunctions
 
 -(void)controlIfNewUserLogin{
-    if(controlUser == nil) {
-        controlUser = [PFUser currentUser];
-        self.allUsersObject = [[ServerAllUsers alloc]initWithDelegate:self];
+    
+    if(self.isMyFriendlist) {
+        
+        NSLog(@"*******************Arkadaşlarına baktı**********************");
+        self.friendsListObject = [[ServerFriendsList alloc]initWithDelegate:self];
+        
     } else {
-        if(![controlUser.objectId isEqualToString:[PFUser currentUser].objectId]) {
-            //Eger yeni bir user login olduysa
-            self.allUsersObject = [[ServerAllUsers alloc]initWithDelegate:self];
-        } else {
-            //Hala aynı user geliyorsa
-        }
+       
+        self.allUsersObject = [[ServerAllUsers alloc]initWithDelegate:self];
+
+        
     }
 }
 
 -(void)setupDelegatesAndSendRequest{
     self.tableView.delegate =self;
     self.tableView.dataSource = self;
+}
+
+#pragma mark - ServerFriendsList delegate
+
+-(void)getServerFriendsListFailed{
+    [self showAlertMessage:@"Arkadaş listesine ulaşılırken bir hata ile karşılaşıldı" andPop:false];
+}
+
+-(void)getServerFriendsListSuccess:(NSArray *)array{
+
+    [self setupDelegatesAndSendRequest];
+    
+    self.allUsersArray = [array mutableCopy];
+    
+    [self.tableView reloadData];
+    
 }
 
 @end

@@ -38,11 +38,6 @@
     [_requestHelperObject getSendingRequestUserListWithControl:false];
 }
 
--(void)controlRequestList:(PFUser*)user{
-    
-#warning Delegate metotlar ayarlanacak bir hata var hatanın sebebi muhtemelen ServerFriendEditing classında biz protocol çağırıyoruz ancak bu çağırma bizim helper classımızın içerisinde gerçekleşiyor ve bu yuzden biz ana programda birşey alamıyoruz
-}
-
 //Private helper methods
 
 -(void)getAllUserListsFromParseBackend:(NSMutableArray *)allUsers control:(BOOL)boolean{

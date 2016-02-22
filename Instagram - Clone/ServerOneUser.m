@@ -20,6 +20,7 @@
 }
 
 -(void)getThisUserInformation:(PFUser*)user{
+    
     PFQuery *query = [PFUser query];
     
     [query whereKey:@"objectId" equalTo:user.objectId];

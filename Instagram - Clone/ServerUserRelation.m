@@ -27,7 +27,6 @@
         } else {
             
             NSLog(@"Congrats you have a new friend");
-
         
         }
         
@@ -59,11 +58,6 @@
             }
         }
     }];
-
-
-
-
-
 }
 
 @end

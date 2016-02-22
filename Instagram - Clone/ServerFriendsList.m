@@ -31,26 +31,29 @@
 
 -(void)getAllFriends{
     
-    self.friendsRelation = [[PFUser currentUser] objectForKey:FriendsRelationID];
+    self.friendsRelation = [[PFUser currentUser] relationForKey:FriendsRelationID];
+    
     if(self.friendsRelation) {
-    PFQuery *query = [self.friendsRelation query];
-    
-    [query orderByAscending:@"username"];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-       
-        if(error) {
-            NSLog(@"There is an error, ServerList.h");
-            [_delegate getServerFriendsListFailed];
-        } else {
-            [_delegate getServerFriendsListSuccess:objects];
-        }
         
-    }];
+        PFQuery *query = [self.friendsRelation query];
+        
+        [query orderByAscending:@"username"];
+        
+        [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+            
+            if(error) {
+                NSLog(@"There is an error, ServerList.h");
+                [_delegate getServerFriendsListFailed];
+            } else {
+                [_delegate getServerFriendsListSuccess:objects];
+            }
+        }];
     }
     else {
         [_delegate getServerFriendsListFailed];
     }
+    
+    
 }
 
 

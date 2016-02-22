@@ -32,6 +32,10 @@ typedef enum{
 //Profile i açılan currentuser mi specific user mı onu belirtir,
 @property (strong, nonatomic) PFUser *controlUser;
 
+/**
+ *  Arkadaşlarım butonuna basıldıgı zaman direk olarak yeni bir ViewController açılarak tüm ilişkili olunan User lar gosterilmektedir
+ */
+- (IBAction)allRelationFriendsList:(UIButton *)sender;
 
 #pragma mark Delegate Instance
 @property (strong, nonatomic) ImagePickerControllerHelperMethod *imagePickerHelperObject;

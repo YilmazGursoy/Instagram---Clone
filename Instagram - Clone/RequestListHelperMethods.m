@@ -75,7 +75,6 @@ static NSMutableArray *allList;
             if(_requestObject) {
                 
                 allList = currentList;
-                
                 [_requestObject.delegate getAllUserListsFromParseBackend:currentList control:boolean];
             }
         }

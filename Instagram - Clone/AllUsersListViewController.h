@@ -12,5 +12,6 @@
 @interface AllUsersListViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, ServerAllUserDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) ServerAllUsers *allUsersObject;
+@property (nonatomic) BOOL isMyFriendlist;
 @property (strong, nonatomic) NSArray *allUsersArray;
 @end
