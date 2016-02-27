@@ -31,7 +31,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sWY-ea-4iN">
-                                                    <rect key="frame" x="60" y="26" width="34" height="21"/>
+                                                    <rect key="frame" x="70" y="26" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -949,8 +949,9 @@
                             <button key="customView" opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cGL-57-MoP">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Arkadaşlarım"/>
+                                <variation key="widthClass=compact"/>
                                 <connections>
                                     <action selector="allRelationFriendsList:" destination="wBn-LC-WBw" eventType="touchUpInside" id="eij-QI-lRB"/>
                                 </connections>
@@ -959,6 +960,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel" destination="OZO-pg-x6s" id="LWR-Cw-H1z"/>
+                        <outlet property="friendsListBarButton" destination="cGL-57-MoP" id="onP-3U-zuy"/>
                         <outlet property="logoutOrAddRemoveFriendsButton" destination="VOh-pm-o6A" id="18n-gS-B1c"/>
                         <outlet property="percentageDone" destination="HO4-yb-wlE" id="Gew-zd-AGA"/>
                         <outlet property="profileImageview" destination="Aku-PU-ZVd" id="Ray-4r-0ny"/>

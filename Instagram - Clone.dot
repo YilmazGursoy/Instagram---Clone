@@ -244,8 +244,8 @@ digraph G {
 	"PFObjectState" -> "PFEncoder";
 	"PFObjectState" -> "PFDateFormatter";
 	"ProfileViewController" -> "FriendsHelperMethods";
-	"ProfileViewController" -> "ImagePickerControllerHelperMethod";
 	"ProfileViewController" -> "ServerFriendEditing";
+	"ProfileViewController" -> "ImagePickerControllerHelperMethod";
 	"ProfileViewController" -> "ServerFriendsList";
 	"ProfileViewController" -> "SendAddFriendRequestHelper";
 	"PFUserConstants" -> {};
@@ -754,10 +754,11 @@ digraph G {
 	"PFNetworkCommand" -> {};
 	"PFCategoryLoader" -> {};
 	"SendAddFriendRequestHelper" -> "AppConstants";
+	"SendAddFriendRequestHelper" -> "RequestListHelperMethods";
 	"AllUsersListViewController" -> "BaseViewController";
-	"AllUsersListViewController" -> "ServerAllUsers";
 	"AllUsersListViewController" -> "UsersProfileViewController";
-	"AllUsersListViewController" -> "ProfileViewController";
+	"AllUsersListViewController" -> "ServerAllUsers";
+	"AllUsersListViewController" -> "ServerFriendsList";
 	"BaseViewController" -> "AppConstants";
 	"PFAlertView" -> {};
 	"PFRole" -> "PFAssert";
@@ -955,12 +956,12 @@ digraph G {
 	"ProfileAcceptCancelViewController" -> "FriendsActivityViewController";
 	"PFPaymentTransactionObserver" -> "PFPaymentTransactionObserver_Private";
 	"PFCurrentUserController" -> "PFQuery";
-	"PFOfflineStore" -> "PFUser";
+	"ProfileViewController" -> "AllUsersListViewController";
 	"PFKeyValueCache_Private" -> "PFKeyValueCache";
 	"PFFieldOperation" -> "PFEncoder";
+	"PFEventuallyQueue" -> "PFEventuallyQueue_Private";
 	"PFACLPrivate" -> "PFACL";
 	"Parse" -> "PFKeychainStore";
-	"RequestListHelperMethods" -> "SendAddFriendRequestHelper";
 	"PFOfflineStore" -> "PFEncoder";
 	"PFQueryState" -> "PFMutableQueryState";
 	"PFDecoder" -> "PFFieldOperationDecoder";
@@ -981,10 +982,10 @@ digraph G {
 	"PFObjectController_Private" -> "PFObjectController";
 	"PFFieldOperation" -> "PFDecoder";
 	"PFOfflineStore" -> "PFOfflineQueryLogic";
-	"PFEventuallyQueue" -> "PFEventuallyQueue_Private";
+	"PFOfflineStore" -> "PFUser";
 	
 	edge [color=black];
 	node [shape=plaintext];
-	"Categories" [label="PFObject+Subclass\nPFProduct+Private\nBFTask+Private"];
+	"Categories" [label="PFObject+Subclass\nServerFriendEditing+SendMesNotif\nPFProduct+Private\nBFTask+Private"];
 }
 

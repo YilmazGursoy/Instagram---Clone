@@ -121,7 +121,6 @@ static BOOL controlNumberForViewWillDid;
 -(void)controlIfNewUserLogin{
     
     if(self.isMyFriendlist) {
-        
         NSLog(@"*******************Arkadaşlarına baktı**********************");
         self.friendsListObject = [[ServerFriendsList alloc]initWithDelegate:self];
         
@@ -129,7 +128,6 @@ static BOOL controlNumberForViewWillDid;
        
         self.allUsersObject = [[ServerAllUsers alloc]initWithDelegate:self];
 
-        
     }
 }
 

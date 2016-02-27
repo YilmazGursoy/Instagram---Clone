@@ -73,7 +73,6 @@ static NSMutableArray *allList;
         } else {
             NSLog(@"Request listesine obje yükleme başarılı");
             if(_requestObject) {
-                
                 allList = currentList;
                 [_requestObject.delegate getAllUserListsFromParseBackend:currentList control:boolean];
             }

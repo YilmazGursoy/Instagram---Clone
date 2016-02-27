@@ -28,6 +28,7 @@ typedef enum{
 @property (strong, nonatomic) IBOutlet UIButton *logoutOrAddRemoveFriendsButton;
 @property (strong, nonatomic) IBOutlet UILabel *percentageDone;
 @property (nonatomic) ButtonNames *buttonNames;
+@property (strong, nonatomic) IBOutlet UIButton *friendsListBarButton;
 
 //Profile i açılan currentuser mi specific user mı onu belirtir,
 @property (strong, nonatomic) PFUser *controlUser;

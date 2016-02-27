@@ -31,10 +31,11 @@
     [super viewWillAppear:animated];
     if(self.controlUser == nil) {
         [self showUserProfile:[PFUser currentUser]];
-        [self setButtonTitle:0];
+        [self setButtonTitle:Cikis];
     }
     else {
         [self userNotMeSetUpAllDelegates];
+        self.friendsListBarButton.hidden = true;
     }
 }
 -(void)viewDidDisappear:(BOOL)animated{
@@ -57,7 +58,7 @@
             //kullanıcıya mesaj atılacak
         
     } else if([self.logoutOrAddRemoveFriendsButton.currentTitle isEqualToString:@"Çıkar"]) {
-
+            
             //TODO://kullanıcı ile oluşturulmuş olan PFRelation  yapısı kaldırılacak,
     
     } else {
@@ -83,11 +84,16 @@
     [self showUserProfile:self.controlUser];
     if(array.count > 0) {
         if([self.friendsListHelper checkIsUserMyFriends:self.controlUser andArray:array]) {
-            [self setButtonTitle:1];
+            [self setButtonTitle:Cikar];
+        } else {
+            self.serverFriendEditingObject = [[ServerFriendEditing alloc]initWithDelegate:self];
+            self.sendAddFriendsRequestObject = [[SendAddFriendRequestHelper alloc]init];
+            //TODO:Burası classlara bağlı yapılacak
+            [self.serverFriendEditingObject isISendRequestThisUser:self.controlUser];
         }
     } else {
         [self showAlertMessage:@"Hiç arkadaşınız bulunmamaktadır" andPop:true];
-        [self setButtonTitle:2];
+        [self setButtonTitle:Ekle];
     }
 }
 
@@ -105,9 +111,9 @@
 
 -(void)controlIfISendRequest:(BOOL)boolean{
     if(boolean) {
-        [self setButtonTitle:3];
+        [self setButtonTitle:Beklemede];
     } else {
-        [self setButtonTitle:2];
+        [self setButtonTitle:Ekle];
     }
 }
 
@@ -116,11 +122,6 @@
 -(void)userNotMeSetUpAllDelegates{
     self.friendsListHelper = [[FriendsHelperMethods alloc]init];
     self.friendsListServer = [[ServerFriendsList alloc]initWithDelegate:self];
-    self.serverFriendEditingObject = [[ServerFriendEditing alloc]initWithDelegate:self];
-    self.sendAddFriendsRequestObject = [[SendAddFriendRequestHelper alloc]init];
-    //TODO:Burası classlara bağlı yapılacak
-    [self.serverFriendEditingObject isISendRequestThisUser:self.controlUser];
-    
 }
 -(void)showUserProfile:(PFUser*)user{
     
@@ -154,6 +155,7 @@
  *  @param title 0 = Cıkıs, 1 = Cıkar, 2 = Ekle, 3 = Beklemede
  */
 -(void)setButtonTitle:(int)title{
+    self.logoutOrAddRemoveFriendsButton.enabled = true;
     ButtonNames names = title;
     switch (names) {
         case Cikis:
@@ -161,6 +163,7 @@
         break;
          case Cikar:
             [self.logoutOrAddRemoveFriendsButton setTitle:@"Çıkar" forState:UIControlStateNormal];
+            
         break;
         case Ekle:
             [self.logoutOrAddRemoveFriendsButton setTitle:@"Ekle" forState:UIControlStateNormal];

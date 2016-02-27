@@ -46,8 +46,6 @@
     
     }
     
-    
-    
 }
 -(void)getAllUserListsFromParseBackend:(NSMutableArray *)allUsers control:(BOOL)boolean{
     int control = 0;
