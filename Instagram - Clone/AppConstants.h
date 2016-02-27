@@ -17,6 +17,7 @@
 #define WaitingRequestsListID @"WaitingRequestsList"
 #define RequestsClassID @"Requests"
 #define AllUserListViewControllerID @"AllUserFriendsListViewControllerID"
+#define UserInstallationDefaults @"UserInstallationDefaults"
 @interface AppConstants : NSObject
 
 @end

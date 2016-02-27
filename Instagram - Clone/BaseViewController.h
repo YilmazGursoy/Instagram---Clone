@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "AppConstants.h"
+#import "UserInstallationHelper.h"
 
 @interface BaseViewController : UIViewController
 /**

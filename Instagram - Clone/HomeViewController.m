@@ -19,7 +19,6 @@
     if([PFUser currentUser] != nil) {
         [[PFUser currentUser] fetch];
     }
-
 }
 
 -(void)viewWillAppear:(BOOL)animated{

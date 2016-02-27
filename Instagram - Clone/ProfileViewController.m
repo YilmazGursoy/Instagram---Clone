@@ -12,7 +12,6 @@
 #import "AllUsersListViewController.h"
 
 
-
 @interface ProfileViewController ()
 @property (strong, nonatomic) ServerFriendsList *friendsListServer;
 @property (strong, nonatomic) FriendsHelperMethods *friendsListHelper;
@@ -50,8 +49,14 @@
 
 - (IBAction)profileSpecificButtonPressed {
     if([self.logoutOrAddRemoveFriendsButton.currentTitle isEqualToString:@"Çıkış"]) {
-        [PFUser logOut];
-        [self.tabBarController setSelectedIndex:0];
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            [UserInstallationHelper deleteUserInstallationID];
+            [PFUser logOut];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tabBarController setSelectedIndex:0];
+            });
+        });
     } else if([self.logoutOrAddRemoveFriendsButton.currentTitle isEqualToString:@"Ekle"]) {
         [self.serverFriendEditingObject sendFriendsRequestToUser:self.controlUser];
         [self.sendAddFriendsRequestObject addRequestListToThisUser:self.controlUser];

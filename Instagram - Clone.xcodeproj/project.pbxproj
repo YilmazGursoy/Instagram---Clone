@@ -11,6 +11,7 @@
 		012A2E291BFA6CCC00A922B3 /* ImagesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 012A2E271BFA6CCC00A922B3 /* ImagesCollectionViewCell.m */; };
 		012A2E2A1BFA6CCC00A922B3 /* ImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012A2E281BFA6CCC00A922B3 /* ImagesCollectionViewCell.xib */; };
 		013017A21C785025006508FF /* ServerFriendEditing+SendMesNotif.m in Sources */ = {isa = PBXBuildFile; fileRef = 013017A11C785025006508FF /* ServerFriendEditing+SendMesNotif.m */; };
+		013B48C61C81A96600017987 /* UserInstallationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 013B48C51C81A96600017987 /* UserInstallationHelper.m */; };
 		0147C44D1BFA946500F0E22A /* ImagesHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 0147C44C1BFA946500F0E22A /* ImagesHelperMethods.m */; };
 		0147C4501BFBCAFB00F0E22A /* FriendsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0147C44F1BFBCAFB00F0E22A /* FriendsListTableViewCell.m */; };
 		015B6A811BD57F93001990A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 015B6A801BD57F93001990A6 /* main.m */; };
@@ -71,6 +72,8 @@
 		012A2E281BFA6CCC00A922B3 /* ImagesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesCollectionViewCell.xib; sourceTree = "<group>"; };
 		013017A01C785025006508FF /* ServerFriendEditing+SendMesNotif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ServerFriendEditing+SendMesNotif.h"; sourceTree = "<group>"; };
 		013017A11C785025006508FF /* ServerFriendEditing+SendMesNotif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ServerFriendEditing+SendMesNotif.m"; sourceTree = "<group>"; };
+		013B48C41C81A96600017987 /* UserInstallationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInstallationHelper.h; sourceTree = "<group>"; };
+		013B48C51C81A96600017987 /* UserInstallationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInstallationHelper.m; sourceTree = "<group>"; };
 		0147C44B1BFA946500F0E22A /* ImagesHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesHelperMethods.h; sourceTree = "<group>"; };
 		0147C44C1BFA946500F0E22A /* ImagesHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesHelperMethods.m; sourceTree = "<group>"; };
 		0147C44E1BFBCAFB00F0E22A /* FriendsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListTableViewCell.h; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 			children = (
 				011015051BD8F2DD00A4B7BF /* ImagePickerControllerHelperMethod.h */,
 				011015061BD8F2DD00A4B7BF /* ImagePickerControllerHelperMethod.m */,
+				013B48C41C81A96600017987 /* UserInstallationHelper.h */,
+				013B48C51C81A96600017987 /* UserInstallationHelper.m */,
 				0147C44B1BFA946500F0E22A /* ImagesHelperMethods.h */,
 				0147C44C1BFA946500F0E22A /* ImagesHelperMethods.m */,
 				01EACAA91BFD442F00AACA1B /* FriendsHelperMethods.h */,
@@ -562,6 +567,7 @@
 				01F847281BD795D9005AAAE1 /* UploadImagesViewController.m in Sources */,
 				013017A21C785025006508FF /* ServerFriendEditing+SendMesNotif.m in Sources */,
 				01EACAA81BFD440000AACA1B /* ServerFriendsList.m in Sources */,
+				013B48C61C81A96600017987 /* UserInstallationHelper.m in Sources */,
 				01F8472B1BD795EE005AAAE1 /* FriendsActivityViewController.m in Sources */,
 				01B089E31C07054A0048D729 /* ProfileAcceptCancelViewController.m in Sources */,
 				015C27D51BFFB30600731D4B /* ServerFriendEditing.m in Sources */,
