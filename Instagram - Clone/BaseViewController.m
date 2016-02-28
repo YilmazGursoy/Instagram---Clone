@@ -23,8 +23,8 @@
     // Do any additional setup after loading the view.
     if([PFUser currentUser] != nil) {
         [UserInstallationHelper setupUserInstallation];
+        
     }
-    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

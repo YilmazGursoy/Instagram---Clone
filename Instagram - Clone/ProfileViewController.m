@@ -63,9 +63,10 @@
             //kullanıcıya mesaj atılacak
         
     } else if([self.logoutOrAddRemoveFriendsButton.currentTitle isEqualToString:@"Çıkar"]) {
-            
-            //TODO://kullanıcı ile oluşturulmuş olan PFRelation  yapısı kaldırılacak,
-    
+        
+        self.userRelationDeleteObject = [[ServerUserRelation alloc]init];
+        [self.userRelationDeleteObject deleteThisUserRelationFromMe:self.controlUser];
+        
     } else {
         NSLog(@"Bu kullanıcıya zaten bir istek atmışsınız daha birşey yapamazsınız");
     }

@@ -12,6 +12,7 @@
 #import "ImagePickerControllerHelperMethod.h"
 #import "SendAddFriendRequestHelper.h"
 #import "ServerFriendEditing.h"
+#import "ServerUserRelation.h"
 
 typedef enum{
     Cikis,
@@ -27,11 +28,13 @@ typedef enum{
 @property (weak, nonatomic) IBOutlet UITextView *descriptionLabel;
 @property (strong, nonatomic) IBOutlet UIButton *logoutOrAddRemoveFriendsButton;
 @property (strong, nonatomic) IBOutlet UILabel *percentageDone;
-@property (nonatomic) ButtonNames *buttonNames;
 @property (strong, nonatomic) IBOutlet UIButton *friendsListBarButton;
+@property (nonatomic) ButtonNames *buttonNames;
 
 //Profile i açılan currentuser mi specific user mı onu belirtir,
 @property (strong, nonatomic) PFUser *controlUser;
+
+@property (strong, nonatomic) ServerUserRelation *userRelationDeleteObject;
 
 /**
  *  Arkadaşlarım butonuna basıldıgı zaman direk olarak yeni bir ViewController açılarak tüm ilişkili olunan User lar gosterilmektedir

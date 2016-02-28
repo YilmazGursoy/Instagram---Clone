@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseViewController.h"
+#import "Server.h"
 
 
-@interface ServerUserRelation : NSObject
+@interface ServerUserRelation : Server
 
 @property (strong, nonatomic) PFRelation *friendsRelation;
 
@@ -21,11 +22,13 @@
  */
 -(void)createUserRelationFromMeTo:(PFUser*)nextUser;
 
+
 /**
- *  Fonksiyon istek gonderen kullanıcının istegi reddedildigi zaman request classından isteginin silinmesine yarar
+ *  Fonksiyon current user ile deletinUser arasında oluşturulmuş olan PFRelation yapısını silmektedir
  *
- *  @param user istegi silinecek olan kullanıcı
+ *  @param deletingUser PFRelation dan silinecek User
  */
--(void)deleteUserRequestFromRequests:(PFUser*)user;
+-(void)deleteThisUserRelationFromMe:(PFUser*)deletingUser;
+
 
 @end

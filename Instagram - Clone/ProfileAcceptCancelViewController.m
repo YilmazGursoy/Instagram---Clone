@@ -8,7 +8,7 @@
 
 #import "ProfileAcceptCancelViewController.h"
 #import "FriendsActivityViewController.h"
-
+#import "ServerUserRelation+ServerSendAcceptToSenderUser.h"
 
 @interface ProfileAcceptCancelViewController ()
 
@@ -20,7 +20,7 @@
     self.sendingMessage = message;
     self.serverOneUserObject = [[ServerOneUser alloc]initWithDelegate:self];
     self.serverUserRelation = [[ServerUserRelation alloc]init];
-    
+    self.serverRequestListObject = [[ServerRequestsList alloc]init];
     if(self)
         return self;
     else
@@ -41,14 +41,15 @@
 - (IBAction)acceptButtonPressed:(UIButton *)sender {
     
     [self.serverUserRelation createUserRelationFromMeTo:self.showingUser];
+    [self.serverUserRelation sendAcceptMessageFromMeToThisUser:self.showingUser];
     
 }
 
 - (IBAction)hideButtonPressed:(UIButton *)sender {
     
-    [self.serverUserRelation deleteUserRequestFromRequests:self.showingUser];
+    [RequestListHelperMethods removeUserFromRequestLists:self.showingUser];
+    
 }
-
 
 #pragma mark - ServerOneUserDelegate
 

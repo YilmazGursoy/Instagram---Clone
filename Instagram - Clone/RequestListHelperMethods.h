@@ -58,4 +58,11 @@
  */
 -(NSMutableArray*) getStaticUserList;
 
+/**
+ *  Istenilen user' in request classından silinmesini yarayan metotdur
+ *
+ *  @param deletingUser silinmek istenen user
+ */
++(void)removeUserFromRequestLists:(PFUser*)deletingUser;
+
 @end

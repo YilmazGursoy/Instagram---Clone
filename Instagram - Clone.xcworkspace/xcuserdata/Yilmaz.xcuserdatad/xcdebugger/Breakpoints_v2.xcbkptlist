@@ -30,7 +30,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram - Clone/ProfileAcceptCancelViewController.m"
-            timestampString = "477672174.712613"
+            timestampString = "478389253.872156"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -52,22 +52,6 @@
             startingLineNumber = "89"
             endingLineNumber = "89"
             landmarkName = "-imageSelectingSuccesfull:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Instagram - Clone/RequestListHelperMethods.m"
-            timestampString = "477646691.315817"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "-getSendingRequestUserListWithControl:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -206,7 +190,7 @@
                   moduleName = "Instagram - Clone"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Yilmaz/Desktop/Instagram%20-%20Clone/Instagram%20-%20Clone/RequestListHelperMethods.m"
-                  timestampString = "478262542.042356"
+                  timestampString = "478383111.432546"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "80"
@@ -221,7 +205,7 @@
                   moduleName = "Instagram - Clone"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Yilmaz/Desktop/Instagram%20-%20Clone/Instagram%20-%20Clone/RequestListHelperMethods.m"
-                  timestampString = "478262542.042519"
+                  timestampString = "478383111.432726"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -236,7 +220,7 @@
                   moduleName = "Instagram - Clone"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Yilmaz/Desktop/Instagram%20-%20Clone/Instagram%20-%20Clone/RequestListHelperMethods.m"
-                  timestampString = "478262542.042646"
+                  timestampString = "478383111.432894"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -509,11 +493,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram - Clone/ProfileViewController.m"
-            timestampString = "478260976.515237"
+            timestampString = "478386725.043298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "-controlIsSendSuccessful:"
             landmarkType = "5">
          </BreakpointContent>
@@ -525,11 +509,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram - Clone/ProfileViewController.m"
-            timestampString = "478260976.515237"
+            timestampString = "478386725.043298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "-getServerFriendsListSuccess:"
             landmarkType = "5">
          </BreakpointContent>
@@ -541,11 +525,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram - Clone/ProfileViewController.m"
-            timestampString = "478260976.515237"
+            timestampString = "478386725.043298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "-getServerFriendsListSuccess:"
             landmarkType = "5">
          </BreakpointContent>
@@ -553,7 +537,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram - Clone/UserInstallationHelper.m"
@@ -569,7 +553,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram - Clone/UserInstallationHelper.m"
@@ -585,7 +569,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram - Clone/UserInstallationHelper.m"
@@ -601,7 +585,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram - Clone/UserInstallationHelper.m"
@@ -617,7 +601,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram - Clone/UserInstallationHelper.m"
@@ -627,6 +611,38 @@
             startingLineNumber = "17"
             endingLineNumber = "17"
             landmarkName = "+setupUserInstallation"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Instagram - Clone/RequestListHelperMethods.m"
+            timestampString = "478305786.43283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-getSendingRequestUserListWithControl:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Instagram - Clone/RequestListHelperMethods.m"
+            timestampString = "478305937.07977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-getSendingRequestUserListWithControl:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

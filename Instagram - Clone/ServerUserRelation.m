@@ -7,6 +7,7 @@
 //
 
 #import "ServerUserRelation.h"
+#import "RequestListHelperMethods.h"
 
 @implementation ServerUserRelation
 
@@ -14,7 +15,7 @@
     
     PFUser *currentUser = [PFUser currentUser];
     
-    self.friendsRelation = [currentUser relationForKey:@"friendsRelation"];
+    self.friendsRelation = [currentUser relationForKey:FriendsRelationID];
     
     [self.friendsRelation addObject:nextUser];
     
@@ -27,37 +28,33 @@
         } else {
             
             NSLog(@"Congrats you have a new friend");
-        
+            [RequestListHelperMethods removeUserFromRequestLists:nextUser];
         }
         
     }];
 
 }
 
--(void)deleteUserRequestFromRequests:(PFUser *)user{
+-(void)deleteThisUserRelationFromMe:(PFUser*)deletingUser{
     
-    PFQuery *query = [PFQuery queryWithClassName:RequestsClassID];
+    self.friendsRelation = [[PFUser currentUser] relationForKey:FriendsRelationID];
     
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+    [self.friendsRelation removeObject:deletingUser];
+    
+    [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
        
-        if( error ) {
-            NSLog(@"There is an error  =  -(void)deleteUserRequestFromRequests:(PFUser *)user{");
-        } else {
-            PFUser *currentUser = [PFUser currentUser];
-            for(PFObject *currentObject in objects) {
-                if([currentObject[@"senderID"] isEqualToString:user.objectId] && [currentObject[@"receipentsID"] isEqualToString:currentUser.objectId]){
-                    [currentObject deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-                        if( error ) {
-                            NSLog(@"There is an error = -(void)deleteUserRequestFromRequests:(PFUser *)user{");
-                        } else {
-                            NSLog(@"Request silme başarılı");
-                        }
-                    }];
-                }
+        if(error) {
+        
+            NSLog(@"There is an error : deleteThisUserRelationFromMe:(PFUser*)deletingUser");
             
-            }
+        } else {
+            
+            NSLog(@"Congrats you delete %@ user",deletingUser.username);
+            
         }
+        
     }];
+
 }
 
 @end

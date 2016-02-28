@@ -18,6 +18,7 @@
 #define RequestsClassID @"Requests"
 #define AllUserListViewControllerID @"AllUserFriendsListViewControllerID"
 #define UserInstallationDefaults @"UserInstallationDefaults"
+#define UserAcceptRequestWarningID @"UserAcceptWarning"
 @interface AppConstants : NSObject
 
 @end

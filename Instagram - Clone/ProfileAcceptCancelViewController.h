@@ -10,6 +10,8 @@
 #import "BaseViewController.h"
 #import "ServerUserRelation.h"
 #import "SendAddFriendRequestHelper.h"
+#import "ServerRequestsList.h"
+#import "RequestListHelperMethods.h"
 
 @interface ProfileAcceptCancelViewController : BaseViewController <ServerOneUserDelegate>
 
@@ -21,6 +23,7 @@
 @property (strong, nonatomic) NSString *sendingMessage;
 @property (strong, nonatomic) ServerOneUser *serverOneUserObject;
 @property (strong, nonatomic) ServerUserRelation *serverUserRelation;
+@property (strong, nonatomic) ServerRequestsList *serverRequestListObject;
 
 - (IBAction)acceptButtonPressed:(UIButton *)sender;
 - (IBAction)hideButtonPressed:(UIButton *)sender;
