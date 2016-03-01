@@ -17,6 +17,11 @@
  */
 -(void)getAllUserListsFromParseBackend:(NSMutableArray*)allUsers control:(BOOL)boolean;
 
+/**
+ *  RequestListHelper classı içerisinde oluşturulur ve genel amacı eger request listesi boş ise programın patlamasını engeller ve failed metotları buradan hareket eder
+ */
+-(void)getAllUserListsFromParseBackendFailed;
+
 @end
 
 
