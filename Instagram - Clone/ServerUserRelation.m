@@ -12,7 +12,7 @@
 
 @implementation ServerUserRelation
 
--(void)createUserRelationFromMeTo:(PFUser *)nextUser{
+-(void)createUserRelationFromMeTo:(PFUser *)nextUser isReceived:(BOOL)boolean{
     
     PFUser *currentUser = [PFUser currentUser];
     
@@ -30,14 +30,16 @@
             
             NSLog(@"Congrats you have a new friend");
             [RequestListHelperMethods removeUserFromRequestLists:nextUser];
-            [self sendMessageFromMeToThisUser:nextUser AndisAccept:true];
+            if(!boolean) {
+                [self sendMessageFromMeToThisUser:nextUser AndisAccept:true];
+            }
         }
         
     }];
 
 }
 
--(void)deleteThisUserRelationFromMe:(PFUser*)deletingUser{
+-(void)deleteThisUserRelationFromMe:(PFUser*)deletingUser isReceived:(BOOL)boolean{
     
     self.friendsRelation = [[PFUser currentUser] relationForKey:FriendsRelationID];
     
@@ -52,7 +54,10 @@
         } else {
             
             NSLog(@"Congrats you delete %@ user",deletingUser.username);
-            [self sendMessageFromMeToThisUser:deletingUser AndisAccept:false];
+            if(!boolean) {
+                [self sendMessageFromMeToThisUser:deletingUser AndisAccept:false];
+            }
+            
             
         }
         

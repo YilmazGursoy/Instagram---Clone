@@ -12,7 +12,7 @@
 
 
 
--(void)sendMessageFromMeToThisUser:(PFUser*)senderUser AndisAccept:(BOOL)boolean{
+-(void)sendMessageFromMeToThisUser:(PFUser*)sendingUser AndisAccept:(BOOL)boolean{
     NSString *requests = @"Kabul";
     
     NSString *sendText = @"Seni Takip Ediyorum Artık";
@@ -32,7 +32,7 @@
             
             [message setObject:@(boolean) forKey:@"isAccept"];
             
-            [message setObject:senderUser.objectId forKey:@"receipentsID"];
+            [message setObject:sendingUser.objectId forKey:@"receipentsID"];
             
             [message setObject:[PFUser currentUser] forKey:@"senderUser"];
             

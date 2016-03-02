@@ -68,7 +68,7 @@
     } else if([self.logoutOrAddRemoveFriendsButton.currentTitle isEqualToString:@"Çıkar"]) {
         
         self.userRelationDeleteObject = [[ServerUserRelation alloc]init];
-        [self.userRelationDeleteObject deleteThisUserRelationFromMe:self.controlUser];
+        [self.userRelationDeleteObject deleteThisUserRelationFromMe:self.controlUser isReceived:false];
         
     } else {
         NSLog(@"Bu kullanıcıya zaten bir istek atmışsınız daha birşey yapamazsınız");

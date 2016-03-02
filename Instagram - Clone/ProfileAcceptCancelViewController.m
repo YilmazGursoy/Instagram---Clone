@@ -40,7 +40,7 @@
 
 - (IBAction)acceptButtonPressed:(UIButton *)sender {
     
-    [self.serverUserRelation createUserRelationFromMeTo:self.showingUser];
+    [self.serverUserRelation createUserRelationFromMeTo:self.showingUser isReceived:false];
     
 }
 

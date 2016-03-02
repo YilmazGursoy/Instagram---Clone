@@ -28,13 +28,13 @@
 
             for( PFObject *newObject in objects ) {
                 
-                if(newObject[@"isAccept"]) {
+                if((int)newObject[@"isAccept"] == 1) {
                     //İstegimizi kabul etmiştir bildirimi gitmektedir
-                    [self createUserRelationFromMeTo:newObject[@"senderUser"]];
+                    [self createUserRelationFromMeTo:newObject[@"senderUser"] isReceived:true];
                     [newObject deleteEventually];
                 } else {
                     //Bizi arkadaşlıktan çıkarmıştır
-                    [self deleteThisUserRelationFromMe:newObject[@"senderUser"]];
+                    [self deleteThisUserRelationFromMe:newObject[@"senderUser"] isReceived:true];
                     [newObject deleteEventually];
                 }
             

@@ -19,16 +19,17 @@
  *  Fonksiyon Userlar arasında bir PFRelation bağının oluşturulması işlemine yaramaktadır
  *
  *  @param nextUser PFRelation oluşturumak istenen user
+ *  @param boolean  Eger bu message alımı ise yani received ise true gonderilir diğer tum durumlarda false gonderilir
  */
--(void)createUserRelationFromMeTo:(PFUser*)nextUser;
-
+-(void)createUserRelationFromMeTo:(PFUser *)nextUser isReceived:(BOOL)boolean;
 
 /**
  *  Fonksiyon current user ile deletinUser arasında oluşturulmuş olan PFRelation yapısını silmektedir
  *
  *  @param deletingUser PFRelation dan silinecek User
+ *  @param boolean      Eger bu message alımı ise yani received ise true gonderilir diğer tum durumlarda false gonderilir
  */
--(void)deleteThisUserRelationFromMe:(PFUser*)deletingUser;
+-(void)deleteThisUserRelationFromMe:(PFUser*)deletingUser isReceived:(BOOL)boolean;
 
 
 @end

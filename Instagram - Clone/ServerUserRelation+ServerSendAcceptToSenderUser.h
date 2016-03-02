@@ -17,6 +17,6 @@
 *  @param senderUser  Kabul ettim sende beni ekle olarak gidecek private mesaj
 *  @param boolean    kullanıcı eger istegi kabul ederse boolean yapısı true dondurulur reddederse ya da arkadaşlıktan çıkarırsa da false dondurulur
 */
--(void)sendMessageFromMeToThisUser:(PFUser*)senderUser AndisAccept:(BOOL)boolean;
+-(void)sendMessageFromMeToThisUser:(PFUser*)sendingUser AndisAccept:(BOOL)boolean;
 
 @end
