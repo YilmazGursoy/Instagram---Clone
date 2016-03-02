@@ -41,7 +41,6 @@
 - (IBAction)acceptButtonPressed:(UIButton *)sender {
     
     [self.serverUserRelation createUserRelationFromMeTo:self.showingUser];
-    [self.serverUserRelation sendAcceptMessageFromMeToThisUser:self.showingUser];
     
 }
 

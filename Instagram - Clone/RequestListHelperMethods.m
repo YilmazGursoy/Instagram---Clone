@@ -46,18 +46,17 @@ static NSMutableArray *allList;
     
     PFQuery *query = [PFQuery queryWithClassName:RequestsClassID];
     
-    [query whereKey:@"senderID" equalTo:currentUser.objectId];
-    
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         
         if( error ) {
             NSLog(@"There is an error  =  -(void)deleteUserRequestFromRequests:(PFUser *)user{");
         } else {
             for( PFObject *newObject in objects ) {
-                
-                [newUserIDs addObject:newObject[@"receipentsID"]];
-            
+                if([newObject[@"senderID"] isEqualToString:currentUser.objectId]) {
+                    [newUserIDs addObject:newObject[@"receipentsID"]];
+                }
             }
+
             [self setAllChangesParseBackend:newUserIDs withControl:boolean];
         }
     }];
@@ -67,20 +66,24 @@ static NSMutableArray *allList;
     
     PFUser *currentUser = [PFUser currentUser];
     
-    [currentUser setObject:currentList forKey:WaitingRequestsListID];
-    
-    [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-        if(error) {
-            NSLog(@"There is an error : -(void)addRequestListToThisUser:(PFUser*)user");
-            [_requestObject.delegate getAllUserListsFromParseBackendFailed];
-        } else {
-            NSLog(@"Request listesine obje yükleme başarılı");
-            if(_requestObject) {
-                allList = currentList;
-                [_requestObject.delegate getAllUserListsFromParseBackend:currentList control:boolean];
+    if(currentList.count > 0) {
+        [currentUser setObject:currentList forKey:WaitingRequestsListID];
+        
+        [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            if(error) {
+                NSLog(@"There is an error : -(void)setAllChangesParseBackend:(NSMutableArray*)currentList withControl:(BOOL)boolean");
+                [_requestObject.delegate getAllUserListsFromParseBackendFailed];
+            } else {
+                NSLog(@"Request listesine obje yükleme başarılı");
+                if(_requestObject) {
+                    allList = currentList;
+                    [_requestObject.delegate getAllUserListsFromParseBackend:currentList control:boolean];
+                }
             }
-        }
-    }];
+        }];
+    } else {
+         [_requestObject.delegate getAllUserListsFromParseBackendFailed];
+    }
 }
 
 -(NSMutableArray *)getStaticUserList{

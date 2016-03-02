@@ -47,6 +47,9 @@
     }
     
 }
+
+#pragma mark - 
+#pragma mark -- RequestListHelperMethodDelegate
 -(void)getAllUserListsFromParseBackend:(NSMutableArray *)allUsers control:(BOOL)boolean{
     int control = 0;
     for(NSString *ID in allUsers) {
@@ -62,5 +65,9 @@
     }
 }
 
-
+-(void)getAllUserListsFromParseBackendFailed{
+    
+    [self.delegate controlIfISendRequest:false];
+    
+}
 @end

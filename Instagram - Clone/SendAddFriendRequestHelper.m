@@ -54,7 +54,6 @@
             [_requestHelperObject setAllChangesParseBackend:availableAllUserArray withControl:true];
         }
 
- 
     } else {
         
         [availableAllUserArray removeObject:_controlUser.objectId];
@@ -62,14 +61,16 @@
         if(![availableAllUserArray containsObject:_controlUser.objectId]) {
             
             [_requestHelperObject setAllChangesParseBackend:availableAllUserArray withControl:false];
-        
+            
         }
-
-        
-        
     }
 }
 
+-(void)getAllUserListsFromParseBackendFailed{
+    
+    [_requestHelperObject setAllChangesParseBackend:[[NSMutableArray alloc]init] withControl:false];
+
+}
 
 -(void)sendUserPushNotificationToRequest:(PFUser *)sendingUser{
 

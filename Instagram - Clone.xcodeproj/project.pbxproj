@@ -34,6 +34,7 @@
 		01B089EA1C07CC420048D729 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B089E91C07CC420048D729 /* Server.m */; };
 		01BE022B1C39CA6500BD7582 /* RequestListHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BE022A1C39CA6500BD7582 /* RequestListHelperMethods.m */; };
 		01D3B33C1C83A0FA00D038F2 /* ServerUserRelation+ServerSendAcceptToSenderUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D3B33B1C83A0FA00D038F2 /* ServerUserRelation+ServerSendAcceptToSenderUser.m */; };
+		01D3B33F1C83BE3300D038F2 /* ServerUserRelation+ServerReceivedAcceptFromReceipentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D3B33E1C83BE3300D038F2 /* ServerUserRelation+ServerReceivedAcceptFromReceipentUser.m */; };
 		01E8DC3B1C373932007D13C8 /* ServerUserRelation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E8DC3A1C373932007D13C8 /* ServerUserRelation.m */; };
 		01EACAA81BFD440000AACA1B /* ServerFriendsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EACAA71BFD440000AACA1B /* ServerFriendsList.m */; };
 		01EACAAB1BFD442F00AACA1B /* FriendsHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EACAAA1BFD442F00AACA1B /* FriendsHelperMethods.m */; };
@@ -117,6 +118,8 @@
 		01BE022A1C39CA6500BD7582 /* RequestListHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestListHelperMethods.m; sourceTree = "<group>"; };
 		01D3B33A1C83A0FA00D038F2 /* ServerUserRelation+ServerSendAcceptToSenderUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ServerUserRelation+ServerSendAcceptToSenderUser.h"; sourceTree = "<group>"; };
 		01D3B33B1C83A0FA00D038F2 /* ServerUserRelation+ServerSendAcceptToSenderUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ServerUserRelation+ServerSendAcceptToSenderUser.m"; sourceTree = "<group>"; };
+		01D3B33D1C83BE3300D038F2 /* ServerUserRelation+ServerReceivedAcceptFromReceipentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ServerUserRelation+ServerReceivedAcceptFromReceipentUser.h"; sourceTree = "<group>"; };
+		01D3B33E1C83BE3300D038F2 /* ServerUserRelation+ServerReceivedAcceptFromReceipentUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ServerUserRelation+ServerReceivedAcceptFromReceipentUser.m"; sourceTree = "<group>"; };
 		01E8DC391C373932007D13C8 /* ServerUserRelation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerUserRelation.h; sourceTree = "<group>"; };
 		01E8DC3A1C373932007D13C8 /* ServerUserRelation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerUserRelation.m; sourceTree = "<group>"; };
 		01EACAA61BFD440000AACA1B /* ServerFriendsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerFriendsList.h; sourceTree = "<group>"; };
@@ -301,6 +304,8 @@
 				01E8DC3A1C373932007D13C8 /* ServerUserRelation.m */,
 				01D3B33A1C83A0FA00D038F2 /* ServerUserRelation+ServerSendAcceptToSenderUser.h */,
 				01D3B33B1C83A0FA00D038F2 /* ServerUserRelation+ServerSendAcceptToSenderUser.m */,
+				01D3B33D1C83BE3300D038F2 /* ServerUserRelation+ServerReceivedAcceptFromReceipentUser.h */,
+				01D3B33E1C83BE3300D038F2 /* ServerUserRelation+ServerReceivedAcceptFromReceipentUser.m */,
 			);
 			name = Server;
 			sourceTree = "<group>";
@@ -319,14 +324,14 @@
 		01F847301BD79617005AAAE1 /* TabControllers */ = {
 			isa = PBXGroup;
 			children = (
+				01F847201BD795B6005AAAE1 /* HomeViewController.h */,
+				01F847211BD795B6005AAAE1 /* HomeViewController.m */,
 				01F8472C1BD795F7005AAAE1 /* ProfileViewController.h */,
 				01F8472D1BD795F7005AAAE1 /* ProfileViewController.m */,
 				01F847291BD795EE005AAAE1 /* FriendsActivityViewController.h */,
 				01F8472A1BD795EE005AAAE1 /* FriendsActivityViewController.m */,
 				01F847261BD795D9005AAAE1 /* UploadImagesViewController.h */,
 				01F847271BD795D9005AAAE1 /* UploadImagesViewController.m */,
-				01F847201BD795B6005AAAE1 /* HomeViewController.h */,
-				01F847211BD795B6005AAAE1 /* HomeViewController.m */,
 				01703EC41BFBE96500359FF3 /* AllUsersListViewController.h */,
 				01703EC51BFBE96500359FF3 /* AllUsersListViewController.m */,
 				01B089E01C07054A0048D729 /* ProfileAcceptCancelViewController.h */,
@@ -557,6 +562,7 @@
 				01F847331BD796AF005AAAE1 /* LoginViewController.m in Sources */,
 				01F8473F1BD81241005AAAE1 /* AppConstants.m in Sources */,
 				01B089E71C07CC070048D729 /* ServerOneUser.m in Sources */,
+				01D3B33F1C83BE3300D038F2 /* ServerUserRelation+ServerReceivedAcceptFromReceipentUser.m in Sources */,
 				01B0899D1C05EFF40048D729 /* ServerRequestsList.m in Sources */,
 				01F8473A1BD7F557005AAAE1 /* BaseViewController.m in Sources */,
 				019AE93D1BFCF3EF00DFC91D /* UsersProfileViewController.m in Sources */,

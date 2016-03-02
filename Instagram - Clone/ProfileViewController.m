@@ -48,19 +48,22 @@
 }
 
 - (IBAction)profileSpecificButtonPressed {
+    
     if([self.logoutOrAddRemoveFriendsButton.currentTitle isEqualToString:@"Çıkış"]) {
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-            [UserInstallationHelper deleteUserInstallationID];
-            [PFUser logOut];
-            dispatch_async(dispatch_get_main_queue(), ^{
+        [UserInstallationHelper deleteUserInstallationID];
+        [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+            if(!error) {
                 [self.tabBarController setSelectedIndex:0];
-            });
-        });
+            }
+        }];
+
+
     } else if([self.logoutOrAddRemoveFriendsButton.currentTitle isEqualToString:@"Ekle"]) {
+        
         [self.serverFriendEditingObject sendFriendsRequestToUser:self.controlUser];
+        
         [self.sendAddFriendsRequestObject addRequestListToThisUser:self.controlUser];
-            //kullanıcıya mesaj atılacak
         
     } else if([self.logoutOrAddRemoveFriendsButton.currentTitle isEqualToString:@"Çıkar"]) {
         
@@ -98,13 +101,17 @@
             [self.serverFriendEditingObject isISendRequestThisUser:self.controlUser];
         }
     } else {
-        [self showAlertMessage:@"Hiç arkadaşınız bulunmamaktadır" andPop:true];
-        [self setButtonTitle:Ekle];
+        self.serverFriendEditingObject = [[ServerFriendEditing alloc]initWithDelegate:self];
+        self.sendAddFriendsRequestObject = [[SendAddFriendRequestHelper alloc]init];
+        //TODO:Burası classlara bağlı yapılacak
+        [self.serverFriendEditingObject isISendRequestThisUser:self.controlUser];
     }
 }
 
 -(void)getServerFriendsListFailed{
+    
     [self showUserProfile:self.controlUser];
+
 }
 #pragma mark - SendAddFriendsRequestDelegate
 

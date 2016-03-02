@@ -8,6 +8,7 @@
 
 #import "ServerUserRelation.h"
 #import "RequestListHelperMethods.h"
+#import "ServerUserRelation+ServerSendAcceptToSenderUser.h"
 
 @implementation ServerUserRelation
 
@@ -29,6 +30,7 @@
             
             NSLog(@"Congrats you have a new friend");
             [RequestListHelperMethods removeUserFromRequestLists:nextUser];
+            [self sendMessageFromMeToThisUser:nextUser AndisAccept:true];
         }
         
     }];
@@ -50,6 +52,7 @@
         } else {
             
             NSLog(@"Congrats you delete %@ user",deletingUser.username);
+            [self sendMessageFromMeToThisUser:deletingUser AndisAccept:false];
             
         }
         

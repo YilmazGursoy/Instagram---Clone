@@ -12,10 +12,11 @@
 
 
 /**
- *  Kullanıcı istek attığı zaman gelen istegi biz tamam dedigimizde aynı istek gibi bir mesaj kullanıcıya gitmeli ve kullanıcı bu mesaj ile de kendi relationOluşturmali
- *
- *  @param senderUser Kabul ettim sende beni ekle olarak gidecek private mesaj
- */
--(void)sendAcceptMessageFromMeToThisUser:(PFUser*)senderUser;
+*  Kullanıcı istek attığı zaman gelen istegi biz tamam dedigimizde aynı istek gibi bir mesaj kullanıcıya gitmeli ve kullanıcı bu mesaj ile de kendi relationOluşturmali
+*
+*  @param senderUser  Kabul ettim sende beni ekle olarak gidecek private mesaj
+*  @param boolean    kullanıcı eger istegi kabul ederse boolean yapısı true dondurulur reddederse ya da arkadaşlıktan çıkarırsa da false dondurulur
+*/
+-(void)sendMessageFromMeToThisUser:(PFUser*)senderUser AndisAccept:(BOOL)boolean;
 
 @end

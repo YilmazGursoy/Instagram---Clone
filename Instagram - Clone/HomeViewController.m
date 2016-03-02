@@ -7,8 +7,11 @@
 //
 
 #import "HomeViewController.h"
+#import "ServerUserRelation+ServerReceivedAcceptFromReceipentUser.h"
 
 @interface HomeViewController ()
+
+@property (strong, nonatomic) ServerUserRelation *userRelation;
 
 @end
 
@@ -16,18 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if([PFUser currentUser] != nil) {
-        [[PFUser currentUser] fetch];
-    }
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    if([PFUser currentUser]) {
+
+    if([PFUser currentUser] != nil) {
         [self showAlertMessage:@"Zaten oturumunuz açık" andPop:false];
+        self.userRelation = [[ServerUserRelation alloc]init];
+        [self.userRelation controlIfAcceptOrNotUserRequests];
+        [[PFUser currentUser] fetch];
     } else {
         [self performSegueWithIdentifier:@"LoginVCSegue" sender:nil];
     }
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
